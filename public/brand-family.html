@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Family - TARGA + WhiteSpace</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@300;400;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #ffffff;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 48px;
+}
+
+/* Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.page-header h1 {
+  font-family: 'Lora', serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: #1e293b;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.page-header .tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.page-header p {
+  font-size: 16px;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Section labels */
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'Lora', serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.section-desc {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 40px;
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* Color DNA */
+.color-dna {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 80px;
+  padding: 48px;
+  background: #f8fafc;
+  border-radius: 16px;
+}
+
+.color-dna h3 {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.palette-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.swatch {
+  flex: 1;
+  height: 48px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.swatch span {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: 10px;
+  font-family: monospace;
+  color: #94a3b8;
+}
+
+.shared-teal {
+  margin-top: 32px;
+  padding: 20px;
+  border: 1px dashed #00bfa5;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.shared-teal p {
+  font-size: 13px;
+  color: #00bfa5;
+  font-weight: 500;
+}
+
+/* Lockup showcase */
+.lockups {
+  margin-bottom: 80px;
+}
+
+.lockup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.lockup-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.lockup-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.lockup-display {
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  min-height: 200px;
+}
+
+.lockup-display.dark {
+  background: linear-gradient(135deg, #0f172a, #1a2744);
+}
+
+.lockup-display.light {
+  background: #f8fafc;
+}
+
+.lockup-display.navy {
+  background: #1f476a;
+}
+
+.lockup-display.slate {
+  background: #475569;
+}
+
+.lockup-divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(255,255,255,0.2);
+}
+
+.lockup-divider.dark {
+  background: #e2e8f0;
+}
+
+.lockup-info {
+  padding: 20px 24px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.lockup-info h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.lockup-info p {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Use cases */
+.use-cases {
+  margin-bottom: 80px;
+}
+
+.use-case {
+  margin-bottom: 48px;
+}
+
+.use-case-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/* Conference badge */
+.badge-mockup {
+  background: white;
+  border-radius: 12px;
+  width: 340px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin: 0 auto;
+}
+
+.badge-top {
+  background: linear-gradient(135deg, #1f476a, #0f172a);
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.badge-body {
+  padding: 32px 28px;
+  text-align: center;
+}
+
+.badge-body h3 {
+  font-family: 'Lora', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.badge-body .role {
+  font-size: 13px;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.badge-brands {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.badge-brands .brand-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-top: 6px;
+}
+
+/* LinkedIn mockup */
+.linkedin-mockup {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.linkedin-banner {
+  height: 120px;
+  background: linear-gradient(135deg, #1f476a, #0f172a);
+  position: relative;
+  overflow: hidden;
+}
+
+.linkedin-content {
+  padding: 24px;
+}
+
+.linkedin-avatar {
+  width: 72px;
+  height: 72px;
+  background: #475569;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-top: -48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Lora', serif;
+  font-size: 22px;
+}
+
+.linkedin-name {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #1e293b;
+  margin: 12px 0 2px 0;
+}
+
+.linkedin-title {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.linkedin-badges {
+  display: flex;
+  gap: 16px;
+}
+
+.linkedin-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.linkedin-badge span {
+  font-size: 11px;
+  font-weight: 500;
+  color: #475569;
+}
+
+/* Presentation mockup */
+.pres-mockup {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.pres-slide {
+  background: linear-gradient(135deg, #0f172a, #1a2744);
+  padding: 48px 56px;
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pres-logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.pres-divider-v {
+  width: 1px;
+  height: 36px;
+  background: rgba(255,255,255,0.2);
+}
+
+.pres-title {
+  font-family: 'Lora', serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: white;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.pres-subtitle {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.pres-footer {
+  position: absolute;
+  bottom: 20px;
+  left: 56px;
+  right: 56px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #475569;
+}
+
+/* Pillar bars */
+.pillar-bar {
+  display: flex;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.pillar-bar div {
+  height: 2px;
+  width: 28px;
+  border-radius: 1px;
+}
+
+/* Footer CTA */
+.cta-section {
+  text-align: center;
+  padding: 60px 40px;
+  background: #f8fafc;
+  border-radius: 16px;
+  margin-top: 80px;
+}
+
+.cta-section h2 {
+  font-family: 'Lora', serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.cta-section p {
+  font-size: 15px;
+  color: #64748b;
+  max-width: 480px;
+  margin: 0 auto 24px auto;
+  line-height: 1.7;
+}
+
+.cta-section .tag {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 16px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .page { padding: 40px 20px; }
+  .color-dna, .lockup-grid { grid-template-columns: 1fr; }
+  .page-header h1 { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="page-header">
+    <span class="tag">HyperBrand Creative - Internal Concept</span>
+    <h1>Brand Family</h1>
+    <p>
+      A visual exploration of how the TARGA and WhiteSpace Clarity Framework brands coexist across shared touchpoints.
+    </p>
+  </div>
+
+  <!-- Color DNA -->
+  <div class="section-label">Color Relationship</div>
+  <h2 class="section-title">Shared Visual DNA</h2>
+  <p class="section-desc">
+    Both brands share a teal accent and dark navy foundation. This isn't an accident - it means they can appear side by side without visual friction.
+  </p>
+
+  <div class="color-dna">
+    <div>
+      <h3>TARGA</h3>
+      <div class="palette-row">
+        <div class="swatch" style="background: #1f476a;"><span>#1f476a</span></div>
+        <div class="swatch" style="background: #0eb2af;"><span>#0eb2af</span></div>
+      </div>
+      <p style="font-size: 12px; color: #64748b; margin-top: 28px;">Navy + Teal. Angular geometry (A mark). Technology-forward.</p>
+    </div>
+    <div>
+      <h3>WhiteSpace</h3>
+      <div class="palette-row">
+        <div class="swatch" style="background: #475569;"><span>#475569</span></div>
+        <div class="swatch" style="background: #00bfa5;"><span>#00bfa5</span></div>
+        <div class="swatch" style="background: #fbbf24;"><span>#fbbf24</span></div>
+      </div>
+      <p style="font-size: 12px; color: #64748b; margin-top: 28px;">Slate + Teal + Gold. Curved brackets. Consulting methodology.</p>
+    </div>
+  </div>
+
+  <div class="shared-teal" style="margin-top: -48px; margin-bottom: 80px;">
+    <p>Shared teal creates immediate visual kinship. The marks are geometrically distinct (angular vs. curved) so they read as siblings, not duplicates.</p>
+  </div>
+
+  <!-- Co-branding Lockups -->
+  <div class="lockups">
+    <div class="section-label">Co-Branding Lockups</div>
+    <h2 class="section-title">Approved Pairings</h2>
+    <p class="section-desc">
+      When both brands appear together, they're separated by a vertical divider and given equal visual weight. Neither brand leads unless context dictates.
+    </p>
+
+    <div class="lockup-grid">
+      <!-- Dark horizontal -->
+      <div class="lockup-card">
+        <div class="lockup-display dark">
+          <!-- TARGA icon -->
+          <svg height="40" viewBox="0 0 295.76 59.34" xmlns="http://www.w3.org/2000/svg">
+            <polygon fill="#0eb2af" points="84.33 45.26 72.97 45.31 78.69 33.46 84.33 45.26"/>
+            <polygon fill="white" points="106.52 58.06 96.46 58.1 78.77 21.08 60.85 58.25 50.66 58.3 73.31 11.33 77.05 3.56 78.77 0 106.52 58.06"/>
+            <path fill="white" d="M133.22,34.99l11.88,23.31h-10.11l-7.89-15.39-6.8-14.21h5.25c1.57,0,2.98-.11,4.21-.37,5-.95,7.53-3.82,7.53-8.59,0-2.72-.9-4.8-2.72-6.21-1.85-1.46-4.69-2.19-8.48-2.22h-22.94l-3.71-7.75h24.91c1.8,0,3.45.08,5,.25,3.2.34,5.87,1.04,8,2.08,1.01.51,1.91,1.1,2.67,1.74,3.54,3.03,5.31,7.02,5.31,11.99,0,3.88-1.09,7.22-3.31,10-2.22,2.78-5.17,4.58-8.79,5.36Z"/>
+            <path fill="white" d="M197.54,29.8l-3.75,7.76h8.29c-.38,3.85-2.19,7.16-5.42,9.93-.03.02-.05.04-.08.06-2.86,2.39-6.03,3.73-9.53,4-.44.04-.89.05-1.35.05-2.74,0-5.37-.6-7.89-1.81-1.87-.9-3.67-2.12-5.41-3.68-4.38-3.95-6.56-8.97-6.56-15.07s1.96-10.83,5.89-14.75c3.92-3.99,8.78-5.99,14.57-5.99,3.39,0,6.51.83,9.36,2.48l3.45-7.15c-.32-.18-.64-.34-.97-.5-3.71-1.75-7.71-2.62-11.98-2.62-7.97,0-14.73,2.78-20.28,8.33-5.56,5.53-8.33,12.27-8.33,20.21s2.73,14.44,8.19,20c2.61,2.64,5.46,4.65,8.57,6.03,3.4,1.51,7.11,2.27,11.11,2.27,2.01,0,3.93-.19,5.76-.56.7-.14,1.39-.32,2.07-.52.29-.09.59-.18.88-.28,4.07-1.37,7.63-3.78,10.69-7.22,2.25-2.55,3.84-5.3,4.79-8.23.97-3.17,1.45-6.81,1.45-10.92v-1.81h-13.51Z"/>
+            <polygon fill="white" points="272.16 58.05 262.11 58.1 244.42 21.08 226.49 58.25 216.31 58.3 244.42 0 272.16 58.05"/>
+            <polygon fill="#0eb2af" points="249.89 45.17 238.7 45.21 244.33 33.54 249.89 45.17"/>
+            <polygon fill="white" points="58.08 3.55 54.34 11.32 30.42 11.32 30.42 58.3 22.15 58.3 22.15 11.32 0 11.32 3.74 3.55 9.74 3.55 9.74 3.55 58.08 3.55"/>
+            <path fill="#0eb2af" d="M286.18,15.18h-7.51l-1.95,4.26h-2.85l8.68-18.65,8.38,18.65h-2.9l-1.84-4.26ZM285.1,12.69l-2.6-5.97-2.73,5.97h5.33Z"/>
+            <rect fill="#0eb2af" x="293.11" y="1.9" width="2.65" height="17.55"/>
+          </svg>
+          <div class="lockup-divider"></div>
+          <!-- WhiteSpace icon -->
+          <svg height="36" viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#ffffff" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/>
+            <path fill="#ffffff" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/>
+            <path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/>
+            <path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/>
+          </svg>
+        </div>
+        <div class="lockup-info">
+          <h4>Side by Side - Dark</h4>
+          <p>Equal weight, vertical divider. TARGA leads when context is technology/AI.</p>
+        </div>
+      </div>
+
+      <!-- Light horizontal -->
+      <div class="lockup-card">
+        <div class="lockup-display light">
+          <svg height="40" viewBox="0 0 295.76 59.34" xmlns="http://www.w3.org/2000/svg">
+            <polygon fill="#0eb2af" points="84.33 45.26 72.97 45.31 78.69 33.46 84.33 45.26"/>
+            <polygon fill="#1f476a" points="106.52 58.06 96.46 58.1 78.77 21.08 60.85 58.25 50.66 58.3 73.31 11.33 77.05 3.56 78.77 0 106.52 58.06"/>
+            <path fill="#1f476a" d="M133.22,34.99l11.88,23.31h-10.11l-7.89-15.39-6.8-14.21h5.25c1.57,0,2.98-.11,4.21-.37,5-.95,7.53-3.82,7.53-8.59,0-2.72-.9-4.8-2.72-6.21-1.85-1.46-4.69-2.19-8.48-2.22h-22.94l-3.71-7.75h24.91c1.8,0,3.45.08,5,.25,3.2.34,5.87,1.04,8,2.08,1.01.51,1.91,1.1,2.67,1.74,3.54,3.03,5.31,7.02,5.31,11.99,0,3.88-1.09,7.22-3.31,10-2.22,2.78-5.17,4.58-8.79,5.36Z"/>
+            <path fill="#1f476a" d="M197.54,29.8l-3.75,7.76h8.29c-.38,3.85-2.19,7.16-5.42,9.93-.03.02-.05.04-.08.06-2.86,2.39-6.03,3.73-9.53,4-.44.04-.89.05-1.35.05-2.74,0-5.37-.6-7.89-1.81-1.87-.9-3.67-2.12-5.41-3.68-4.38-3.95-6.56-8.97-6.56-15.07s1.96-10.83,5.89-14.75c3.92-3.99,8.78-5.99,14.57-5.99,3.39,0,6.51.83,9.36,2.48l3.45-7.15c-.32-.18-.64-.34-.97-.5-3.71-1.75-7.71-2.62-11.98-2.62-7.97,0-14.73,2.78-20.28,8.33-5.56,5.53-8.33,12.27-8.33,20.21s2.73,14.44,8.19,20c2.61,2.64,5.46,4.65,8.57,6.03,3.4,1.51,7.11,2.27,11.11,2.27,2.01,0,3.93-.19,5.76-.56.7-.14,1.39-.32,2.07-.52.29-.09.59-.18.88-.28,4.07-1.37,7.63-3.78,10.69-7.22,2.25-2.55,3.84-5.3,4.79-8.23.97-3.17,1.45-6.81,1.45-10.92v-1.81h-13.51Z"/>
+            <polygon fill="#1f476a" points="272.16 58.05 262.11 58.1 244.42 21.08 226.49 58.25 216.31 58.3 244.42 0 272.16 58.05"/>
+            <polygon fill="#0eb2af" points="249.89 45.17 238.7 45.21 244.33 33.54 249.89 45.17"/>
+            <polygon fill="#1f476a" points="58.08 3.55 54.34 11.32 30.42 11.32 30.42 58.3 22.15 58.3 22.15 11.32 0 11.32 3.74 3.55 9.74 3.55 9.74 3.55 58.08 3.55"/>
+            <path fill="#0eb2af" d="M286.18,15.18h-7.51l-1.95,4.26h-2.85l8.68-18.65,8.38,18.65h-2.9l-1.84-4.26ZM285.1,12.69l-2.6-5.97-2.73,5.97h5.33Z"/>
+            <rect fill="#0eb2af" x="293.11" y="1.9" width="2.65" height="17.55"/>
+          </svg>
+          <div class="lockup-divider dark"></div>
+          <svg height="36" viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#475569" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/>
+            <path fill="#475569" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/>
+            <path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/>
+            <path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/>
+          </svg>
+        </div>
+        <div class="lockup-info">
+          <h4>Side by Side - Light</h4>
+          <p>WhiteSpace leads when context is consulting methodology.</p>
+        </div>
+      </div>
+
+      <!-- Icons only -->
+      <div class="lockup-card">
+        <div class="lockup-display dark">
+          <svg height="48" viewBox="0 0 55.86 58.3" xmlns="http://www.w3.org/2000/svg">
+            <polygon fill="#0eb2af" points="33.67 45.26 22.31 45.31 28.03 33.46 33.67 45.26"/>
+            <polygon fill="white" points="55.86 58.06 45.8 58.1 28.11 21.08 10.19 58.25 0 58.3 22.65 11.33 26.39 3.56 28.11 0 55.86 58.06"/>
+          </svg>
+          <div class="lockup-divider"></div>
+          <svg height="44" viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#ffffff" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/>
+            <path fill="#ffffff" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/>
+            <path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/>
+            <path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/>
+          </svg>
+        </div>
+        <div class="lockup-info">
+          <h4>Icon Marks Only</h4>
+          <p>Compact contexts: app bars, favicons, social avatars. Angular A meets curved brackets.</p>
+        </div>
+      </div>
+
+      <!-- TARGA navy bg -->
+      <div class="lockup-card">
+        <div class="lockup-display navy">
+          <svg height="36" viewBox="0 0 295.76 59.34" xmlns="http://www.w3.org/2000/svg">
+            <polygon fill="#0eb2af" points="84.33 45.26 72.97 45.31 78.69 33.46 84.33 45.26"/>
+            <polygon fill="white" points="106.52 58.06 96.46 58.1 78.77 21.08 60.85 58.25 50.66 58.3 73.31 11.33 77.05 3.56 78.77 0 106.52 58.06"/>
+            <path fill="white" d="M133.22,34.99l11.88,23.31h-10.11l-7.89-15.39-6.8-14.21h5.25c1.57,0,2.98-.11,4.21-.37,5-.95,7.53-3.82,7.53-8.59,0-2.72-.9-4.8-2.72-6.21-1.85-1.46-4.69-2.19-8.48-2.22h-22.94l-3.71-7.75h24.91c1.8,0,3.45.08,5,.25,3.2.34,5.87,1.04,8,2.08,1.01.51,1.91,1.1,2.67,1.74,3.54,3.03,5.31,7.02,5.31,11.99,0,3.88-1.09,7.22-3.31,10-2.22,2.78-5.17,4.58-8.79,5.36Z"/>
+            <path fill="white" d="M197.54,29.8l-3.75,7.76h8.29c-.38,3.85-2.19,7.16-5.42,9.93-.03.02-.05.04-.08.06-2.86,2.39-6.03,3.73-9.53,4-.44.04-.89.05-1.35.05-2.74,0-5.37-.6-7.89-1.81-1.87-.9-3.67-2.12-5.41-3.68-4.38-3.95-6.56-8.97-6.56-15.07s1.96-10.83,5.89-14.75c3.92-3.99,8.78-5.99,14.57-5.99,3.39,0,6.51.83,9.36,2.48l3.45-7.15c-.32-.18-.64-.34-.97-.5-3.71-1.75-7.71-2.62-11.98-2.62-7.97,0-14.73,2.78-20.28,8.33-5.56,5.53-8.33,12.27-8.33,20.21s2.73,14.44,8.19,20c2.61,2.64,5.46,4.65,8.57,6.03,3.4,1.51,7.11,2.27,11.11,2.27,2.01,0,3.93-.19,5.76-.56.7-.14,1.39-.32,2.07-.52.29-.09.59-.18.88-.28,4.07-1.37,7.63-3.78,10.69-7.22,2.25-2.55,3.84-5.3,4.79-8.23.97-3.17,1.45-6.81,1.45-10.92v-1.81h-13.51Z"/>
+            <polygon fill="white" points="272.16 58.05 262.11 58.1 244.42 21.08 226.49 58.25 216.31 58.3 244.42 0 272.16 58.05"/>
+            <polygon fill="#0eb2af" points="249.89 45.17 238.7 45.21 244.33 33.54 249.89 45.17"/>
+            <polygon fill="white" points="58.08 3.55 54.34 11.32 30.42 11.32 30.42 58.3 22.15 58.3 22.15 11.32 0 11.32 3.74 3.55 9.74 3.55 9.74 3.55 58.08 3.55"/>
+          </svg>
+          <div class="lockup-divider"></div>
+          <svg height="32" viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#ffffff" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/>
+            <path fill="#ffffff" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/>
+            <path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/>
+            <path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/>
+          </svg>
+        </div>
+        <div class="lockup-info">
+          <h4>On TARGA Navy</h4>
+          <p>WhiteSpace brackets go white. TARGA's navy hosts both brands naturally.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Use Case: Presentation -->
+  <div class="use-cases">
+    <div class="section-label">Use Cases</div>
+    <h2 class="section-title">Real-World Applications</h2>
+    <p class="section-desc">
+      How the two brands coexist across the touchpoints Steve and Bill already navigate.
+    </p>
+
+    <!-- Joint Presentation -->
+    <div class="use-case">
+      <p class="use-case-title">Joint Engagement Presentation</p>
+      <div class="pres-mockup">
+        <div class="pres-slide">
+          <div style="position: absolute; right: -40px; bottom: -40px; opacity: 0.03;">
+            <svg height="300" viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg">
+              <path fill="white" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/>
+              <path fill="white" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/>
+              <path fill="white" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/>
+              <path fill="white" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/>
+            </svg>
+          </div>
+          <div class="pres-logos">
+            <svg height="32" viewBox="0 0 55.86 58.3" xmlns="http://www.w3.org/2000/svg">
+              <polygon fill="#0eb2af" points="33.67 45.26 22.31 45.31 28.03 33.46 33.67 45.26"/>
+              <polygon fill="white" points="55.86 58.06 45.8 58.1 28.11 21.08 10.19 58.25 0 58.3 22.65 11.33 26.39 3.56 28.11 0 55.86 58.06"/>
+            </svg>
+            <div class="pres-divider-v"></div>
+            <svg height="28" viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#ffffff" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/>
+              <path fill="#ffffff" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/>
+              <path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/>
+              <path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/>
+            </svg>
+          </div>
+          <p class="pres-title">AI-Powered Asset Discovery<br>& Valuation Platform</p>
+          <p class="pres-subtitle">Technology meets methodology - A joint capability overview</p>
+          <div class="pillar-bar">
+            <div style="background: #1f476a;"></div>
+            <div style="background: #0eb2af;"></div>
+            <div style="background: #475569;"></div>
+            <div style="background: #fbbf24;"></div>
+          </div>
+          <div class="pres-footer">
+            <span>TARGA AI + WhiteSpace Clarity Framework</span>
+            <span>Confidential</span>
+          </div>
+        </div>
+      </div>
+      <p style="font-size: 12px; color: #64748b; text-align: center; margin-top: 12px;">Joint presentation deck - TARGA icon leads (technology context), WhiteSpace brackets follow. Combined pillar bar.</p>
+    </div>
+
+    <!-- LinkedIn Profile -->
+    <div class="use-case">
+      <p class="use-case-title">Steve Smith - LinkedIn Profile</p>
+      <div class="linkedin-mockup">
+        <div class="linkedin-banner" style="display: flex; align-items: center; justify-content: space-between; padding: 0 32px;">
+          <svg height="28" viewBox="0 0 295.76 59.34" xmlns="http://www.w3.org/2000/svg" style="opacity: 0.3;">
+            <polygon fill="#0eb2af" points="84.33 45.26 72.97 45.31 78.69 33.46 84.33 45.26"/>
+            <polygon fill="white" points="106.52 58.06 96.46 58.1 78.77 21.08 60.85 58.25 50.66 58.3 73.31 11.33 77.05 3.56 78.77 0 106.52 58.06"/>
+            <path fill="white" d="M133.22,34.99l11.88,23.31h-10.11l-7.89-15.39-6.8-14.21h5.25c1.57,0,2.98-.11,4.21-.37,5-.95,7.53-3.82,7.53-8.59,0-2.72-.9-4.8-2.72-6.21-1.85-1.46-4.69-2.19-8.48-2.22h-22.94l-3.71-7.75h24.91c1.8,0,3.45.08,5,.25,3.2.34,5.87,1.04,8,2.08,1.01.51,1.91,1.1,2.67,1.74,3.54,3.03,5.31,7.02,5.31,11.99,0,3.88-1.09,7.22-3.31,10-2.22,2.78-5.17,4.58-8.79,5.36Z"/>
+            <path fill="white" d="M197.54,29.8l-3.75,7.76h8.29c-.38,3.85-2.19,7.16-5.42,9.93-.03.02-.05.04-.08.06-2.86,2.39-6.03,3.73-9.53,4-.44.04-.89.05-1.35.05-2.74,0-5.37-.6-7.89-1.81-1.87-.9-3.67-2.12-5.41-3.68-4.38-3.95-6.56-8.97-6.56-15.07s1.96-10.83,5.89-14.75c3.92-3.99,8.78-5.99,14.57-5.99,3.39,0,6.51.83,9.36,2.48l3.45-7.15c-.32-.18-.64-.34-.97-.5-3.71-1.75-7.71-2.62-11.98-2.62-7.97,0-14.73,2.78-20.28,8.33-5.56,5.53-8.33,12.27-8.33,20.21s2.73,14.44,8.19,20c2.61,2.64,5.46,4.65,8.57,6.03,3.4,1.51,7.11,2.27,11.11,2.27,2.01,0,3.93-.19,5.76-.56.7-.14,1.39-.32,2.07-.52.29-.09.59-.18.88-.28,4.07-1.37,7.63-3.78,10.69-7.22,2.25-2.55,3.84-5.3,4.79-8.23.97-3.17,1.45-6.81,1.45-10.92v-1.81h-13.51Z"/>
+            <polygon fill="white" points="272.16 58.05 262.11 58.1 244.42 21.08 226.49 58.25 216.31 58.3 244.42 0 272.16 58.05"/>
+            <polygon fill="#0eb2af" points="249.89 45.17 238.7 45.21 244.33 33.54 249.89 45.17"/>
+            <polygon fill="white" points="58.08 3.55 54.34 11.32 30.42 11.32 30.42 58.3 22.15 58.3 22.15 11.32 0 11.32 3.74 3.55 9.74 3.55 9.74 3.55 58.08 3.55"/>
+          </svg>
+          <svg height="24" viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg" style="opacity: 0.3;">
+            <path fill="#ffffff" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/>
+            <path fill="#ffffff" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/>
+            <path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/>
+            <path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/>
+          </svg>
+        </div>
+        <div class="linkedin-content">
+          <div class="linkedin-avatar">SS</div>
+          <p class="linkedin-name">Steve Smith</p>
+          <p class="linkedin-title">CEO, TARGA AI - Managing Partner, Consult WhiteSpace</p>
+          <div class="linkedin-badges">
+            <div class="linkedin-badge">
+              <svg height="16" viewBox="0 0 55.86 58.3" xmlns="http://www.w3.org/2000/svg">
+                <polygon fill="#0eb2af" points="33.67 45.26 22.31 45.31 28.03 33.46 33.67 45.26"/>
+                <polygon fill="#1f476a" points="55.86 58.06 45.8 58.1 28.11 21.08 10.19 58.25 0 58.3 22.65 11.33 26.39 3.56 28.11 0 55.86 58.06"/>
+              </svg>
+              <span>TARGA AI</span>
+            </div>
+            <div class="linkedin-badge">
+              <svg height="16" viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#475569" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/>
+                <path fill="#475569" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/>
+                <path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/>
+                <path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/>
+              </svg>
+              <span>WhiteSpace</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size: 12px; color: #64748b; text-align: center; margin-top: 12px;">Steve's LinkedIn profile - banner carries both brands at low opacity. Experience section badges show both affiliations.</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>These brands are ready to work together.</h2>
+    <p>
+      A formal Brand Bridge Strategy document would define co-branding rules, messaging hierarchy, shared audience targeting, and a visual system that scales across both entities.
+    </p>
+    <span class="tag">Proposed as separate engagement - HyperBrand Creative</span>
+  </div>
+
+</div>
+</body>
+</html>
