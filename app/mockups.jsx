@@ -810,10 +810,11 @@ export default function Mockups() {
             <div className="hero">
               <div className="hero-content">
                 <div className="hero-text">
-                  <h1>See Your Organizational Assets Clearly</h1>
+                  <h1>Master the System That Turns Hidden Assets Into Measurable Value</h1>
                   <p>
-                    The WhiteSpace Clarity Framework helps you understand what you have, 
-                    what it is worth, and how to systematically convert it into customer value.
+                    The WhiteSpace Clarity Framework gives you a proven, repeatable methodology 
+                    to uncover what organizations are overlooking, integrate their assets into a working 
+                    system, and deliver outcomes that justify premium engagements.
                   </p>
                   <div className="hero-buttons">
                     <button className="btn btn-primary">Get Certified</button>
@@ -907,7 +908,7 @@ export default function Mockups() {
             </div>
 
             <div className="card-white" style={{ marginTop: '40px', textAlign: 'center', padding: '48px' }}>
-              <p style={{ fontSize: '14px', color: '#64748b', marginBottom: '20px' }}>Ready to see what your organization is missing?</p>
+              <p style={{ fontSize: '14px', color: '#64748b', marginBottom: '20px' }}>Ready to deliver this to your clients?</p>
               <button className="btn btn-primary">Explore the Certification Program</button>
             </div>
           </>
@@ -1623,9 +1624,9 @@ export default function Mockups() {
             <div className="card-white">
               <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#1e293b', marginBottom: '20px' }}>Primary Tagline</h3>
               <p style={{ fontFamily: 'Lora, serif', fontSize: '24px', fontWeight: '300', color: '#1e293b', marginBottom: '12px' }}>
-                "See Your Organizational Assets Clearly"
+                "Master the System That Turns Hidden Assets Into Measurable Value"
               </p>
-              <p style={{ fontSize: '13px', color: '#64748b' }}>Use for hero headlines, email subject lines, and primary CTAs across all channels.</p>
+              <p style={{ fontSize: '13px', color: '#64748b' }}>Primary tagline - consultant-facing. For client-facing contexts, use: "See Your Organizational Assets Clearly."</p>
             </div>
           </>
         )}
@@ -1997,7 +1998,7 @@ export default function Mockups() {
                       <Icon size={120} />
                     </div>
                     <Icon size={28} />
-                    <p style={{ fontFamily: 'Lora, serif', fontSize: '20px', fontWeight: '300', color: 'white', margin: '16px 0 4px 0', lineHeight: '1.3' }}>See what your organization is missing.</p>
+                    <p style={{ fontFamily: 'Lora, serif', fontSize: '20px', fontWeight: '300', color: 'white', margin: '16px 0 4px 0', lineHeight: '1.3' }}>The framework your clients have been waiting for.</p>
                     <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0 }}>The WhiteSpace Clarity Framework</p>
                   </div>
                   {/* Email body */}
@@ -2048,7 +2049,7 @@ export default function Mockups() {
                 <div className="card-white" style={{ margin: 0 }}>
                   <h4 style={{ fontSize: '13px', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>Subject Line Guidelines</h4>
                   <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.7', margin: 0 }}>
-                    Lead with insight or question, not company name. Keep under 50 characters. No exclamation marks, no ALL CAPS. Examples: "What your org chart isn't showing you" or "The asset gap most consultants miss."
+                    Lead with insight or question, not company name. Keep under 50 characters. No exclamation marks, no ALL CAPS. Examples: "The asset gap most consultants miss" or "What if your methodology had a system behind it?"
                   </p>
                 </div>
               </div>
@@ -3127,7 +3128,7 @@ export default function Mockups() {
                   <Icon size={300} />
                 </div>
                 <div style={{ position: 'relative', zIndex: 1 }}>
-                  <p style={{ fontFamily: 'Lora, serif', fontSize: '24px', fontWeight: '300', color: 'white', margin: '0 0 4px 0' }}>See Your Organizational Assets Clearly</p>
+                  <p style={{ fontFamily: 'Lora, serif', fontSize: '24px', fontWeight: '300', color: 'white', margin: '0 0 4px 0' }}>Master the System That Turns Hidden Assets Into Measurable Value</p>
                   <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0 }}>Consulting Certification - Value Collaborator System - Outcome Dynamics</p>
                 </div>
                 <div style={{ position: 'relative', zIndex: 1 }}>
