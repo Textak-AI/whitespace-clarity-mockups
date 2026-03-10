@@ -1041,35 +1041,47 @@ export default function Mockups() {
       setReviewMode(true);
       document.body.classList.add('review-active');
     }
-    try {
-      const saved = localStorage.getItem('ws-review-comments');
-      if (saved) setComments(JSON.parse(saved));
-    } catch (e) { /* ignore */ }
+    // Load comments from server
+    fetch('/api/review').then(r => r.json()).then(data => {
+      if (data && typeof data === 'object') setComments(data);
+    }).catch(() => {});
   }, []);
-
-  useEffect(() => {
-    try {
-      localStorage.setItem('ws-review-comments', JSON.stringify(comments));
-    } catch (e) { /* ignore */ }
-  }, [comments]);
 
   const showToast = (msg) => {
     setToast(msg);
     setTimeout(() => setToast(null), 2500);
   };
 
-  const addComment = (blockKey, text, author = 'Steve') => {
+  const apiPost = async (body) => {
+    try {
+      const res = await fetch('/api/review', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      if (data.comments) setComments(data.comments);
+      return data;
+    } catch (e) {
+      showToast('Failed to save - check connection');
+      return null;
+    }
+  };
+
+  const addComment = (blockKey, text) => {
     if (!text.trim()) return;
+    // Optimistic update
     const newComment = {
       id: Date.now(),
       text: text.trim(),
-      author,
+      author: 'Steve',
       time: new Date().toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }),
     };
     setComments(prev => ({
       ...prev,
       [blockKey]: [...(prev[blockKey] || []), newComment],
     }));
+    apiPost({ action: 'add', blockKey, comment: text.trim() });
   };
 
   const editComment = (blockKey, commentId, newText) => {
@@ -1079,6 +1091,7 @@ export default function Mockups() {
         c.id === commentId ? { ...c, text: newText, edited: true } : c
       ),
     }));
+    apiPost({ action: 'edit', blockKey, commentId, newText });
   };
 
   const deleteComment = (blockKey, commentId) => {
@@ -1086,6 +1099,7 @@ export default function Mockups() {
       ...prev,
       [blockKey]: (prev[blockKey] || []).filter(c => c.id !== commentId),
     }));
+    apiPost({ action: 'delete', blockKey, commentId });
   };
 
   const totalComments = Object.values(comments).reduce((sum, arr) => sum + arr.length, 0);
@@ -1130,7 +1144,7 @@ export default function Mockups() {
   const clearAllComments = () => {
     if (window.confirm('Clear all review notes? This cannot be undone.')) {
       setComments({});
-      localStorage.removeItem('ws-review-comments');
+      apiPost({ action: 'clear' });
       showToast('All notes cleared');
     }
   };

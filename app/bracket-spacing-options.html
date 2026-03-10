@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bracket Spacing - Comparison</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@300;400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'DM Sans', sans-serif; background: #f8fafc; color: #1e293b; }
+
+.page { max-width: 1100px; margin: 0 auto; padding: 60px 40px; }
+
+h1 {
+  font-family: 'Lora', serif;
+  font-size: 28px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 48px;
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card-display {
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  background: white;
+}
+
+.card-display.dark {
+  background: linear-gradient(135deg, #0f172a, #1a2744);
+}
+
+.card-label {
+  padding: 20px 24px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.card-label h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.card-label p {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.card-label .tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.tag-current { background: #f1f5f9; color: #64748b; }
+.tag-updated { background: #00bfa510; color: #00bfa5; }
+
+/* Slider section */
+.slider-section {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.slider-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.slider-section p {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.slider-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.slider-wrap label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+  min-width: 60px;
+}
+
+input[type="range"] {
+  width: 300px;
+  accent-color: #00bfa5;
+}
+
+.slider-value {
+  font-family: monospace;
+  font-size: 13px;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+.slider-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 48px;
+}
+
+.option-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 32px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option-card:hover {
+  border-color: #00bfa5;
+  box-shadow: 0 4px 12px rgba(0, 191, 165, 0.1);
+}
+
+.option-card.active {
+  border-color: #00bfa5;
+  background: #f0fdfa;
+}
+
+.option-card h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 16px;
+}
+
+.option-card p {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 4px;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Bracket Spacing Options</h1>
+  <p class="subtitle">Same paths, same curves, same proportions - only the horizontal spacing between brackets changes.</p>
+
+  <!-- Before / After -->
+  <div class="comparison">
+    <div class="card">
+      <div class="card-display">
+        <svg width="200" viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#475569" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/>
+          <path fill="#475569" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/>
+          <path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/>
+          <path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/>
+        </svg>
+      </div>
+      <div class="card-label">
+        <h3>Current Spacing</h3>
+        <p>Original bracket positions as designed</p>
+        <span class="tag tag-current">Current</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-display">
+        <svg width="200" viewBox="10 0 238.78 231.71" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(10, 0)">
+            <path fill="#475569" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/>
+          </g>
+          <g transform="translate(5, 0)">
+            <path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/>
+          </g>
+          <g transform="translate(-5, 0)">
+            <path fill="#475569" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/>
+          </g>
+          <g transform="translate(-10, 0)">
+            <path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/>
+          </g>
+        </svg>
+      </div>
+      <div class="card-label">
+        <h3>Tighter (-10px per side)</h3>
+        <p>Brackets pulled 10px toward center. Same curves, same weight.</p>
+        <span class="tag tag-updated">Recommended</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive slider -->
+  <div class="slider-section">
+    <h3>Interactive Spacing</h3>
+    <p>Drag to explore different spacing values. The bracket shapes never change - only the gaps between them.</p>
+
+    <div class="slider-wrap">
+      <label>Wider</label>
+      <input type="range" id="spacingSlider" min="0" max="15" value="10" step="1">
+      <label>Tighter</label>
+      <span class="slider-value" id="sliderValue">-10px</span>
+    </div>
+
+    <div class="slider-preview">
+      <svg id="previewIcon" width="240" viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg">
+        <g id="bracketLeft">
+          <path fill="#475569" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/>
+        </g>
+        <g id="bracketTeal">
+          <path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/>
+        </g>
+        <g id="bracketRight">
+          <path fill="#475569" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/>
+        </g>
+        <g id="bracketGold">
+          <path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Live context previews -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; padding-top: 32px; border-top: 1px solid #f1f5f9;">
+      <!-- Wordmark lockup -->
+      <div>
+        <p style="font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #94a3b8; margin-bottom: 16px; text-align: center;">Wordmark Lockup</p>
+        <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 32px; display: flex; align-items: center; justify-content: center; gap: 16px; min-height: 100px;">
+          <svg id="lockupIcon" width="48" viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg">
+            <g id="lockupLeft"><path fill="#475569" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/></g>
+            <g id="lockupTeal"><path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/></g>
+            <g id="lockupRight"><path fill="#475569" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/></g>
+            <g id="lockupGold"><path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/></g>
+          </svg>
+          <div>
+            <p style="font-family: 'Lora', serif; font-size: 22px; font-weight: 300; color: #475569; line-height: 1; margin: 0;">WhiteSpace</p>
+            <div style="display: inline-block; background: #f2f2f2; padding: 2px 4px; margin-top: 2px;">
+              <p style="font-size: 9px; font-weight: 500; color: #64748b; letter-spacing: 1.5px; text-transform: uppercase; margin: 0;">Clarity Framework</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social avatar -->
+      <div>
+        <p style="font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #94a3b8; margin-bottom: 16px; text-align: center;">Social Avatar</p>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 24px; min-height: 100px;">
+          <!-- Light avatar -->
+          <div style="text-align: center;">
+            <div style="width: 80px; height: 80px; border-radius: 50%; background: #f8fafc; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+              <svg id="avatarLight" width="48" viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg">
+                <g id="avatarLightLeft"><path fill="#475569" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/></g>
+                <g id="avatarLightTeal"><path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/></g>
+                <g id="avatarLightRight"><path fill="#475569" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/></g>
+                <g id="avatarLightGold"><path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/></g>
+              </svg>
+            </div>
+            <p style="font-size: 10px; color: #94a3b8; margin-top: 8px;">Light</p>
+          </div>
+          <!-- Dark avatar -->
+          <div style="text-align: center;">
+            <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #0f172a, #1a2744); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+              <svg id="avatarDark" width="48" viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg">
+                <g id="avatarDarkLeft"><path fill="#ffffff" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/></g>
+                <g id="avatarDarkTeal"><path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/></g>
+                <g id="avatarDarkRight"><path fill="#ffffff" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/></g>
+                <g id="avatarDarkGold"><path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/></g>
+              </svg>
+            </div>
+            <p style="font-size: 10px; color: #94a3b8; margin-top: 8px;">Dark</p>
+          </div>
+          <!-- LinkedIn circle -->
+          <div style="text-align: center;">
+            <div style="width: 80px; height: 80px; border-radius: 50%; background: #475569; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+              <svg id="avatarLinkedIn" width="48" viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg">
+                <g id="avatarLinkedInLeft"><path fill="rgba(255,255,255,0.85)" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/></g>
+                <g id="avatarLinkedInTeal"><path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/></g>
+                <g id="avatarLinkedInRight"><path fill="rgba(255,255,255,0.85)" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/></g>
+                <g id="avatarLinkedInGold"><path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/></g>
+              </svg>
+            </div>
+            <p style="font-size: 10px; color: #94a3b8; margin-top: 8px;">On Slate</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Four preset options -->
+  <h3 style="font-size: 14px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: #1e293b; margin-bottom: 20px;">Preset Options</h3>
+  <div class="options-grid">
+    <div class="option-card" data-spacing="0" onclick="setSpacing(0)">
+      <svg width="100" viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#475569" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/>
+        <path fill="#475569" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/>
+        <path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/>
+        <path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/>
+      </svg>
+      <h4>Original</h4>
+      <p>Current spacing (0px)</p>
+    </div>
+
+    <div class="option-card" data-spacing="8" onclick="setSpacing(8)">
+      <svg width="100" viewBox="8 0 242.78 231.71" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(8, 0)"><path fill="#475569" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/></g>
+        <g transform="translate(4, 0)"><path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/></g>
+        <g transform="translate(-4, 0)"><path fill="#475569" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/></g>
+        <g transform="translate(-8, 0)"><path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/></g>
+      </svg>
+      <h4>Subtle</h4>
+      <p>-8px per side</p>
+    </div>
+
+    <div class="option-card active" data-spacing="10" onclick="setSpacing(10)">
+      <svg width="100" viewBox="10 0 238.78 231.71" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(10, 0)"><path fill="#475569" d="M66.27,231.1c-2.78.4-5.63.61-8.52.61-31.85,0-57.75-25.21-57.75-57.76V21C0,10.5,8.75,1.75,19.25,1.75c3.04,0,5.94.74,8.52,2.04-6.32,3.18-10.73,9.75-10.73,17.21v152.95c0,29.59,21.41,53.12,49.23,57.15Z"/></g>
+        <g transform="translate(5, 0)"><path fill="#00bfa5" d="M143.27.61c-27.82,4.03-49.23,27.55-49.23,57.14v116.9c0,11.2-8.75,19.95-19.25,19.95-3.04,0-5.94-.74-8.52-2.06,6.32-3.22,10.73-9.94,10.73-17.89V57.75C77,25.2,102.9,0,134.75,0c2.89,0,5.74.21,8.52.61Z"/></g>
+        <g transform="translate(-5, 0)"><path fill="#475569" d="M220.27,231.1c-2.78.4-5.62.61-8.51.61-31.86,0-57.76-25.21-57.76-57.76V57.05c0-7.95-4.41-14.67-10.73-17.89,2.58-1.32,5.48-2.06,8.52-2.06,10.5,0,19.25,8.75,19.25,19.95v116.9c0,29.59,21.41,53.12,49.23,57.15Z"/></g>
+        <g transform="translate(-10, 0)"><path fill="#fbbf24" d="M258.78,3.79c-6.32,3.17-10.74,9.75-10.74,17.21v153.65c0,11.2-8.75,19.95-19.25,19.95-1.39,0-2.76-.15-4.07-.45-1.55-.35-3.04-.89-4.44-1.61.03-.01.05-.03.08-.04,1.59-.82,3.06-1.86,4.36-3.09,3.85-3.62,6.29-8.85,6.29-14.76V21c0-10.5,8.75-19.25,19.25-19.25,2.99,0,5.85.72,8.4,1.98.04.02.08.04.12.06Z"/></g>
+      </svg>
+      <h4>Recommended</h4>
+      <p>-10px per side</p>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const slider = document.getElementById('spacingSlider');
+const sliderValue = document.getElementById('sliderValue');
+
+// All SVG sets that need to update
+const svgSets = [
+  { prefix: 'bracket', svg: document.getElementById('previewIcon') },
+  { prefix: 'lockup', svg: document.getElementById('lockupIcon') },
+  { prefix: 'avatarLight', svg: document.getElementById('avatarLight') },
+  { prefix: 'avatarDark', svg: document.getElementById('avatarDark') },
+  { prefix: 'avatarLinkedIn', svg: document.getElementById('avatarLinkedIn') },
+];
+
+function updateSpacing(val) {
+  const v = parseFloat(val);
+  sliderValue.textContent = v === 0 ? '0px' : `-${v}px`;
+
+  svgSets.forEach(set => {
+    const left = document.getElementById(set.prefix + 'Left');
+    const teal = document.getElementById(set.prefix + 'Teal');
+    const right = document.getElementById(set.prefix + 'Right');
+    const gold = document.getElementById(set.prefix + 'Gold');
+
+    if (left) left.setAttribute('transform', `translate(${v}, 0)`);
+    if (teal) teal.setAttribute('transform', `translate(${v/2}, 0)`);
+    if (right) right.setAttribute('transform', `translate(${-v/2}, 0)`);
+    if (gold) gold.setAttribute('transform', `translate(${-v}, 0)`);
+
+    if (set.svg) {
+      const newWidth = 258.78 - (v * 2);
+      set.svg.setAttribute('viewBox', `${v} 0 ${newWidth} 231.71`);
+    }
+  });
+
+  // Update option cards
+  document.querySelectorAll('.option-card').forEach(card => {
+    const cardSpacing = parseFloat(card.dataset.spacing);
+    card.classList.toggle('active', Math.abs(cardSpacing - v) < 2);
+  });
+}
+
+slider.addEventListener('input', (e) => updateSpacing(e.target.value));
+
+function setSpacing(val) {
+  slider.value = val;
+  updateSpacing(val);
+}
+
+// Init
+updateSpacing(10);
+</script>
+</body>
+</html>
