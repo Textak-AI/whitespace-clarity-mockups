@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const styles = `
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@300;400;600&family=DM+Sans:wght@400;500;600&display=swap');
@@ -690,11 +690,370 @@ header {
   border-radius: 12px;
   padding: 24px;
 }
+
+/* ============================================
+   REVIEW MODE
+   ============================================ */
+
+.review-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0f172a;
+  color: white;
+  padding: 10px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  font-size: 13px;
+  border-top: 3px solid #00bfa5;
+}
+
+.review-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-bar-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00bfa5;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.review-bar-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.review-bar-btn {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.review-bar-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.review-bar-btn.export {
+  background: #00bfa5;
+  border-color: #00bfa5;
+}
+
+.review-bar-btn.export:hover {
+  background: #00a68e;
+}
+
+.review-panel {
+  margin-top: 48px;
+  border: 2px solid #00bfa5;
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+}
+
+.review-panel-header {
+  background: linear-gradient(135deg, #0f172a, #1a2744);
+  padding: 20px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-panel-header h3 {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+}
+
+.review-panel-header span {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.review-panel-body {
+  padding: 24px 28px;
+}
+
+.review-comments {
+  margin-bottom: 20px;
+}
+
+.review-comment {
+  padding: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.review-comment-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.review-comment-author {
+  font-weight: 600;
+  font-size: 13px;
+  color: #1e293b;
+}
+
+.review-comment-time {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.review-comment-text {
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.review-comment-delete {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #cbd5e1;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.review-comment-delete:hover {
+  color: #ef4444;
+  background: #fef2f2;
+}
+
+.review-input-area {
+  display: flex;
+  gap: 12px;
+}
+
+.review-input-area textarea {
+  flex: 1;
+  padding: 14px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  resize: vertical;
+  min-height: 60px;
+  max-height: 200px;
+  transition: border-color 0.2s;
+  color: #1e293b;
+  line-height: 1.5;
+}
+
+.review-input-area textarea:focus {
+  outline: none;
+  border-color: #00bfa5;
+}
+
+.review-input-area textarea::placeholder {
+  color: #94a3b8;
+}
+
+.review-submit-btn {
+  padding: 14px 24px;
+  background: #00bfa5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+  align-self: flex-end;
+}
+
+.review-submit-btn:hover {
+  background: #00a68e;
+}
+
+.review-submit-btn:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.review-empty {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.review-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #0f172a;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  z-index: 200;
+  animation: toast-in 0.3s ease;
+  border-left: 3px solid #00bfa5;
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body.review-active {
+  padding-bottom: 52px;
+}
+
+.nav-tab-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.nav-tab-wrapper .nav-tab {
+  flex: 1;
+}
+
+.tab-comment-dot {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00bfa5;
+  pointer-events: none;
+}
 `;
 
 export default function Mockups() {
   const [activeTab, setActiveTab] = useState('hero');
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [reviewMode, setReviewMode] = useState(false);
+  const [comments, setComments] = useState({});
+  const [commentDraft, setCommentDraft] = useState('');
+  const [toast, setToast] = useState(null);
+  const textareaRef = useRef(null);
+
+  // Review mode: activate via ?review=true URL param
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('review') === 'true') {
+      setReviewMode(true);
+      document.body.classList.add('review-active');
+    }
+    // Load comments from localStorage
+    try {
+      const saved = localStorage.getItem('ws-review-comments');
+      if (saved) setComments(JSON.parse(saved));
+    } catch (e) { /* ignore */ }
+  }, []);
+
+  // Save comments to localStorage on change
+  useEffect(() => {
+    if (Object.keys(comments).length > 0) {
+      try {
+        localStorage.setItem('ws-review-comments', JSON.stringify(comments));
+      } catch (e) { /* ignore */ }
+    }
+  }, [comments]);
+
+  const showToast = (msg) => {
+    setToast(msg);
+    setTimeout(() => setToast(null), 2500);
+  };
+
+  const addComment = (sectionId) => {
+    if (!commentDraft.trim()) return;
+    const newComment = {
+      id: Date.now(),
+      text: commentDraft.trim(),
+      author: 'Steve',
+      time: new Date().toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }),
+    };
+    setComments(prev => ({
+      ...prev,
+      [sectionId]: [...(prev[sectionId] || []), newComment],
+    }));
+    setCommentDraft('');
+    if (textareaRef.current) textareaRef.current.style.height = 'auto';
+  };
+
+  const deleteComment = (sectionId, commentId) => {
+    setComments(prev => ({
+      ...prev,
+      [sectionId]: (prev[sectionId] || []).filter(c => c.id !== commentId),
+    }));
+  };
+
+  const totalComments = Object.values(comments).reduce((sum, arr) => sum + arr.length, 0);
+
+  const exportComments = () => {
+    const lines = [];
+    const tabMap = {};
+    tabs.forEach(t => tabMap[t.id] = t.label);
+    Object.entries(comments).forEach(([sectionId, sectionComments]) => {
+      if (sectionComments.length === 0) return;
+      lines.push(`\n--- ${tabMap[sectionId] || sectionId} ---`);
+      sectionComments.forEach(c => {
+        lines.push(`[${c.time}] ${c.author}: ${c.text}`);
+      });
+    });
+    if (lines.length === 0) {
+      showToast('No comments to export');
+      return;
+    }
+    const text = `WhiteSpace Brand System - Review Notes\nExported ${new Date().toLocaleDateString()}\n${lines.join('\n')}`;
+    navigator.clipboard.writeText(text).then(() => {
+      showToast('All notes copied to clipboard');
+    }).catch(() => {
+      // Fallback: download as file
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'whitespace-review-notes.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast('Notes downloaded as file');
+    });
+  };
+
+  const clearAllComments = () => {
+    if (window.confirm('Clear all review notes? This cannot be undone.')) {
+      setComments({});
+      localStorage.removeItem('ws-review-comments');
+      showToast('All notes cleared');
+    }
+  };
 
   const Icon = ({ size = 40 }) => (
     <svg width={size} height={size} viewBox="0 0 258.78 231.71" xmlns="http://www.w3.org/2000/svg">
@@ -786,16 +1145,20 @@ export default function Mockups() {
           {/* 2-Row Navigation Grid */}
           <nav className={`nav-grid ${mobileNavOpen ? 'open' : ''}`}>
             {tabs.map(tab => (
-              <button
-                key={tab.id}
-                className={`nav-tab ${activeTab === tab.id ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveTab(tab.id);
-                  setMobileNavOpen(false);
-                }}
-              >
-                {tab.label}
-              </button>
+              <div key={tab.id} className="nav-tab-wrapper">
+                <button
+                  className={`nav-tab ${activeTab === tab.id ? 'active' : ''}`}
+                  onClick={() => {
+                    setActiveTab(tab.id);
+                    setMobileNavOpen(false);
+                  }}
+                >
+                  {tab.label}
+                </button>
+                {reviewMode && (comments[tab.id] || []).length > 0 && (
+                  <div className="tab-comment-dot" title={`${(comments[tab.id] || []).length} note(s)`}></div>
+                )}
+              </div>
             ))}
           </nav>
         </div>
@@ -3431,7 +3794,76 @@ export default function Mockups() {
           </>
         )}
 
+        {/* ==================== REVIEW PANEL ==================== */}
+        {reviewMode && (
+          <div className="review-panel">
+            <div className="review-panel-header">
+              <h3>Review Notes - {tabs.find(t => t.id === activeTab)?.label || activeTab}</h3>
+              <span>{(comments[activeTab] || []).length} note{(comments[activeTab] || []).length !== 1 ? 's' : ''}</span>
+            </div>
+            <div className="review-panel-body">
+              {(comments[activeTab] || []).length > 0 ? (
+                <div className="review-comments">
+                  {(comments[activeTab] || []).map(c => (
+                    <div key={c.id} className="review-comment">
+                      <div className="review-comment-meta">
+                        <span className="review-comment-author">{c.author}</span>
+                        <span className="review-comment-time">{c.time}</span>
+                      </div>
+                      <div className="review-comment-text">{c.text}</div>
+                      <button className="review-comment-delete" onClick={() => deleteComment(activeTab, c.id)} title="Delete note">{'\u2715'}</button>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="review-empty">No notes for this section yet. Add your feedback below.</div>
+              )}
+              <div className="review-input-area">
+                <textarea
+                  ref={textareaRef}
+                  value={commentDraft}
+                  onChange={e => {
+                    setCommentDraft(e.target.value);
+                    e.target.style.height = 'auto';
+                    e.target.style.height = e.target.scrollHeight + 'px';
+                  }}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) {
+                      addComment(activeTab);
+                    }
+                  }}
+                  placeholder="Add a note about this section... (Cmd+Enter to submit)"
+                />
+                <button
+                  className="review-submit-btn"
+                  disabled={!commentDraft.trim()}
+                  onClick={() => addComment(activeTab)}
+                >
+                  Add Note
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
       </div>
+
+      {/* Review Mode Bottom Bar */}
+      {reviewMode && (
+        <div className="review-bar">
+          <div className="review-bar-left">
+            <div className="review-bar-dot"></div>
+            <span>Review Mode - {totalComments} total note{totalComments !== 1 ? 's' : ''} across all sections</span>
+          </div>
+          <div className="review-bar-actions">
+            <button className="review-bar-btn" onClick={clearAllComments}>Clear All</button>
+            <button className="review-bar-btn export" onClick={exportComments}>Export Notes</button>
+          </div>
+        </div>
+      )}
+
+      {/* Toast notification */}
+      {toast && <div className="review-toast">{toast}</div>}
     </>
   );
 }
