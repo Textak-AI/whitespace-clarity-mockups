@@ -1128,7 +1128,7 @@ export default function Mockups() {
       showToast('No comments to export');
       return;
     }
-    const text = `WhiteSpace Brand System - Review Notes\nExported ${new Date().toLocaleDateString()}\n${lines.join('\n')}`;
+    const text = `Outcome Dynamics™ Brand System - Review Notes\nExported ${new Date().toLocaleDateString()}\n${lines.join('\n')}`;
     navigator.clipboard.writeText(text).then(() => {
       showToast('All notes copied to clipboard');
     }).catch(() => {
@@ -1358,8 +1358,8 @@ export default function Mockups() {
                   <h1>Master the System That Turns Competitive Markets Into Premium Positioning</h1>
                   <p>
                     The Outcome Dynamics™ methodology gives you a proven, repeatable system 
-                    to uncover what organizations are overlooking, integrate their assets into a working 
-                    system, and deliver outcomes that justify premium engagements.
+                    to move organizations from commoditized competition into differentiated, 
+                    premium positioning - delivering outcomes that justify premium engagements.
                   </p>
                   <div className="hero-buttons">
                     <button className="btn btn-primary">Get Certified</button>
@@ -1374,36 +1374,45 @@ export default function Mockups() {
               <div className="pillar-cards">
                 <div className="pillar-card navy">
                   <h3>Expectation</h3>
-                  <p>Clarity about what organizational assets exist and what they are truly worth.</p>
+                  <p>Leadership gains clarity on what competitive positioning is possible and the gap between where they are and premium markets.</p>
                 </div>
                 <div className="pillar-card teal">
                   <h3>Systemization</h3>
-                  <p>A proven methodology for how assets work together as an integrated system.</p>
+                  <p>A proven methodology for redesigning how the organization works as an integrated, value-producing system.</p>
                 </div>
                 <div className="pillar-card gold">
                   <h3>Realization</h3>
-                  <p>Systematic conversion of organizational assets into measurable customer value.</p>
+                  <p>Execute the plan and measure results. Revenue grows, customer experience improves, differentiation emerges.</p>
                 </div>
                 <div className="pillar-card blue">
                   <h3>Validation</h3>
-                  <p>Lock in gains and predict the future. Know which metrics predict which outcomes.</p>
+                  <p>Lock in gains and predict the future. Know which metrics predict which outcomes. Scale with mathematical certainty.</p>
                 </div>
               </div>
             </div>
             <ReviewBlock blockKey="voice:dimensions" label="Messaging Dimensions" />
 
             <div className="card-white" style={{ marginTop: '48px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
-                <div style={{ width: '4px', height: '40px', background: 'linear-gradient(to bottom, #475569, #00bfa5)', borderRadius: '2px' }}></div>
+              <div style={{ display: 'flex', gap: '28px', alignItems: 'flex-start' }}>
+                <img
+                  src="data:image/jpeg;base64,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"
+                  alt="Outcome Dynamics book cover"
+                  style={{ width: '110px', borderRadius: '6px', boxShadow: '6px 6px 24px rgba(0,0,0,0.18)', flexShrink: 0 }}
+                />
                 <div>
-                  <h3 style={{ fontFamily: 'Lora, serif', fontSize: '20px', fontWeight: '400', color: '#1e293b' }}>Outcome Dynamics™</h3>
-                  <p style={{ fontSize: '13px', color: '#64748b', margin: 0 }}>By Bill Adams - Launching September 2026 via Forbes Books</p>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                    <div style={{ width: '4px', height: '40px', background: 'linear-gradient(to bottom, #fbbf24, #f59e0b)', borderRadius: '2px' }}></div>
+                    <div>
+                      <h3 style={{ fontFamily: 'Lora, serif', fontSize: '20px', fontWeight: '400', color: '#1e293b', margin: 0 }}>Outcome Dynamics™</h3>
+                      <p style={{ fontFamily: 'Lora, serif', fontSize: '13px', fontWeight: '300', color: '#64748b', margin: '2px 0 0 0', fontStyle: 'italic' }}>Solving The Business Performance Puzzle</p>
+                    </div>
+                  </div>
+                  <p style={{ fontSize: '13px', color: '#64748b', margin: '0 0 10px 0' }}>By Bill Adams Jr. — Forbes Books, September 2026</p>
+                  <p style={{ fontSize: '14px', color: '#475569', lineHeight: '1.8', maxWidth: '580px', margin: 0 }}>
+                    The definitive guide to competitive differentiation and premium positioning, built on the Value Component System™ methodology.
+                  </p>
                 </div>
               </div>
-              <p style={{ fontSize: '14px', color: '#475569', lineHeight: '1.8', maxWidth: '700px' }}>
-                The definitive guide to understanding how organizations systematically convert their assets 
-                into value creation. Built on the patented Value Collaborator System™ methodology.
-              </p>
             </div>
             <ReviewBlock blockKey="hero:general" label="General Feedback" />
           </>
@@ -1414,7 +1423,7 @@ export default function Mockups() {
           <>
             <h2 className="section-title">Brand Story</h2>
             <p className="section-subtitle">
-              The philosophy, methodology, and purpose behind the WhiteSpace Outcome Dynamics™.
+              The philosophy, positioning framework, and purpose behind the Outcome Dynamics™ methodology.
             </p>
 
             <div className="icon-showcase" style={{ marginBottom: '48px', padding: '80px' }}>
@@ -1423,17 +1432,18 @@ export default function Mockups() {
 
             <div className="card-white">
               <h3 style={{ fontFamily: 'Lora, serif', fontSize: '24px', fontWeight: '300', color: '#1e293b', marginBottom: '20px' }}>
-                Every market has white space - the gap between commodity competition and premium positioning that most organizations never see.
+                Every market has white space - the gap between commodity competition and premium positioning that most organizations never reach.
               </h3>
               <p style={{ fontSize: '15px', color: '#475569', lineHeight: '1.8', marginBottom: '24px', maxWidth: '760px' }}>
-                Outcome Dynamics™ was developed by Bill Adams after decades of observing the same pattern: 
-                why do organizations consistently undervalue what they already have? Through decades of consulting 
-                experience, Adams developed the Value Collaborator System™ - a patented methodology that reveals, 
-                organizes, and monetizes organizational assets.
+                Outcome Dynamics™ was developed by Bill Adams Jr. after decades of observing the same pattern: 
+                organizations competing on price in crowded markets when the path to premium positioning was always 
+                within reach. Through that work, Adams developed the Value Component System™ - a methodology that 
+                restructures how services are delivered, sold, and presented to move organizations from dark space 
+                (commoditized competition) into white space (differentiated, premium markets).
               </p>
               <p style={{ fontSize: '15px', color: '#475569', lineHeight: '1.8', maxWidth: '760px' }}>
-                The Framework rests on four phases - Expectation, Systemization, Realization, and Validation - each 
-                representing a stage in the journey from asset awareness to measurable, predictable value creation.
+                The methodology rests on four phases - Expectation, Systemization, Realization, and Validation - each 
+                representing a stage in the journey from competitive clarity to measurable, predictable value creation.
               </p>
             </div>
 
@@ -1441,19 +1451,19 @@ export default function Mockups() {
               <div className="box accent-navy" style={{ paddingLeft: '28px' }}>
                 <h4 style={{ fontFamily: 'Lora, serif', fontSize: '18px', fontWeight: '400', color: '#475569', marginBottom: '12px' }}>Expectation</h4>
                 <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.7', margin: 0 }}>
-                  Establishing clarity about what organizational assets exist, their current state, and their unrealized potential.
+                  Leadership gains clarity on what competitive positioning is possible and what stands between them and premium markets.
                 </p>
               </div>
               <div className="box accent-teal" style={{ paddingLeft: '28px' }}>
                 <h4 style={{ fontFamily: 'Lora, serif', fontSize: '18px', fontWeight: '400', color: '#00bfa5', marginBottom: '12px' }}>Systemization</h4>
                 <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.7', margin: 0 }}>
-                  Applying a proven methodology to integrate assets into a working system where every element amplifies the others.
+                  Redesigning how the organization works - team interactions, decision authority, feedback loops, and incentive alignment.
                 </p>
               </div>
               <div className="box accent-gold" style={{ paddingLeft: '28px' }}>
                 <h4 style={{ fontFamily: 'Lora, serif', fontSize: '18px', fontWeight: '400', color: '#d97706', marginBottom: '12px' }}>Realization</h4>
                 <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.7', margin: 0 }}>
-                  Systematically converting organizational assets into measurable customer value and business outcomes.
+                  Execute the plan and measure results. Customer experience improves, revenue grows, competitive differentiation emerges.
                 </p>
               </div>
               <div className="box accent-blue" style={{ paddingLeft: '28px' }}>
@@ -1467,6 +1477,34 @@ export default function Mockups() {
             <div className="card-white" style={{ marginTop: '40px', textAlign: 'center', padding: '48px' }}>
               <p style={{ fontSize: '14px', color: '#64748b', marginBottom: '20px' }}>Ready to deliver this to your clients?</p>
               <button className="btn btn-primary">Explore the Certification Program</button>
+            </div>
+
+            <div className="card-white" style={{ marginTop: '32px' }}>
+              <h3 style={{ fontFamily: 'Lora, serif', fontSize: '22px', fontWeight: '400', color: '#1e293b', marginBottom: '8px' }}>The Value Component System™</h3>
+              <p style={{ fontSize: '14px', color: '#64748b', marginBottom: '28px', lineHeight: '1.7' }}>
+                Six categories every organization has. Most manage them independently. Outcome Dynamics™ connects them into a system where each component leverages the others - moving the organization from dark space into white space.
+              </p>
+              <div className="grid-3">
+                {[
+                  { label: 'People', color: '#475569', desc: 'The human system - how teams interact, decide, and align around customer outcomes.' },
+                  { label: 'Product (Service)', color: '#00bfa5', desc: 'What is delivered and how it is structured to communicate and deliver differentiated value.' },
+                  { label: 'Procedures', color: '#fbbf24', desc: 'The operational systems that ensure consistent, premium delivery at scale.' },
+                  { label: 'Policies', color: '#2563eb', desc: 'The rules that govern how the organization behaves with clients, partners, and team.' },
+                  { label: 'Property', color: '#475569', desc: 'Owned infrastructure, IP, tools, and resources that contribute to differentiation.' },
+                  { label: 'Price', color: '#00bfa5', desc: 'How pricing is structured to reflect and reinforce premium positioning.' },
+                ].map((item, i) => (
+                  <div key={i} style={{ padding: '20px', borderRadius: '12px', background: '#f8fafc', border: '1px solid #f1f5f9' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+                      <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: item.color, flexShrink: 0 }}></div>
+                      <h4 style={{ fontFamily: 'Lora, serif', fontSize: '16px', fontWeight: '500', color: '#0f172a', margin: 0 }}>{item.label}</h4>
+                    </div>
+                    <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: '1.65' }}>{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <p style={{ fontSize: '12px', color: '#94a3b8', marginTop: '20px', fontStyle: 'italic' }}>
+                The six components are framed as levers for competitive differentiation - not as a cost inventory. All copy using this framework must reinforce premium positioning, not resource discovery.
+              </p>
             </div>
             <ReviewBlock blockKey="brand-story:narrative" label="Brand Narrative" />
             <ReviewBlock blockKey="brand-story:general" label="General Feedback" />
@@ -1634,7 +1672,7 @@ export default function Mockups() {
           <>
             <h2 className="section-title">Color System</h2>
             <p className="section-subtitle">
-              Brand colors carry meaning. Navy for authority, Teal for innovation, Gold for value realization, Blue for action.
+              Brand colors carry meaning. Navy for authority and grounding, Teal for innovation and progress, Gold for realization of outcomes, Blue for action and validation.
             </p>
 
             <h3 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '20px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Primary Palette</h3>
@@ -1642,31 +1680,66 @@ export default function Mockups() {
               <div className="color-swatch">
                 <div className="color-display" style={{ backgroundColor: '#475569' }}></div>
                 <div className="color-specs">
-                  <div className="color-name">Navy</div>
-                  <div className="color-code">HEX: #475569<br/>RGB: 71, 85, 105<br/>Role: Authority, Foundation</div>
+                  <div className="color-name">Navy (Slate)</div>
+                  <div className="color-code">HEX: #475569<br/>RGB: 71, 85, 105<br/>Role: Authority, Foundation<br/>Phase: Expectation</div>
                 </div>
               </div>
               <div className="color-swatch">
                 <div className="color-display" style={{ backgroundColor: '#00bfa5' }}></div>
                 <div className="color-specs">
                   <div className="color-name">Teal</div>
-                  <div className="color-code">HEX: #00bfa5<br/>RGB: 0, 191, 165<br/>Role: Innovation, Progress</div>
+                  <div className="color-code">HEX: #00bfa5<br/>RGB: 0, 191, 165<br/>Role: Innovation, Progress<br/>Phase: Systemization</div>
                 </div>
               </div>
               <div className="color-swatch">
                 <div className="color-display" style={{ backgroundColor: '#fbbf24' }}></div>
                 <div className="color-specs">
                   <div className="color-name">Gold</div>
-                  <div className="color-code">HEX: #fbbf24<br/>RGB: 251, 191, 36<br/>Role: Realization &amp; Validation</div>
+                  <div className="color-code">HEX: #fbbf24<br/>RGB: 251, 191, 36<br/>Role: Outcomes, Premium<br/>Phase: Realization</div>
                 </div>
               </div>
               <div className="color-swatch">
                 <div className="color-display" style={{ backgroundColor: '#2563eb' }}></div>
                 <div className="color-specs">
                   <div className="color-name">Blue</div>
-                  <div className="color-code">HEX: #2563eb<br/>RGB: 37, 99, 235<br/>Role: CTAs, Interaction</div>
+                  <div className="color-code">HEX: #2563eb<br/>RGB: 37, 99, 235<br/>Role: CTAs, Interaction<br/>Phase: Validation</div>
                 </div>
               </div>
+            </div>
+
+            <div className="card-white" style={{ marginBottom: '48px' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#1e293b', marginBottom: '20px' }}>Phase Color Mapping</h3>
+              <table className="spec-table">
+                <thead>
+                  <tr><th>Phase</th><th>Color</th><th>Hex</th><th>Use</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style={{ fontWeight: '600' }}>Expectation</td>
+                    <td><span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}><span style={{ width: '12px', height: '12px', borderRadius: '3px', background: '#475569', display: 'inline-block' }}></span>Navy</span></td>
+                    <td style={{ fontFamily: 'monospace' }}>#475569</td>
+                    <td>Phase 1 badge, accent, section marker</td>
+                  </tr>
+                  <tr>
+                    <td style={{ fontWeight: '600' }}>Systemization</td>
+                    <td><span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}><span style={{ width: '12px', height: '12px', borderRadius: '3px', background: '#00bfa5', display: 'inline-block' }}></span>Teal</span></td>
+                    <td style={{ fontFamily: 'monospace' }}>#00bfa5</td>
+                    <td>Phase 2 badge, accent, section marker</td>
+                  </tr>
+                  <tr>
+                    <td style={{ fontWeight: '600' }}>Realization</td>
+                    <td><span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}><span style={{ width: '12px', height: '12px', borderRadius: '3px', background: '#fbbf24', display: 'inline-block' }}></span>Gold</span></td>
+                    <td style={{ fontFamily: 'monospace' }}>#fbbf24</td>
+                    <td>Phase 3 badge, premium signals, book launch</td>
+                  </tr>
+                  <tr>
+                    <td style={{ fontWeight: '600' }}>Validation</td>
+                    <td><span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}><span style={{ width: '12px', height: '12px', borderRadius: '3px', background: '#2563eb', display: 'inline-block' }}></span>Blue</span></td>
+                    <td style={{ fontFamily: 'monospace' }}>#2563eb</td>
+                    <td>Phase 4 badge, CTAs, interactive elements</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
             <ReviewBlock blockKey="colors:primary-palette" label="Primary Palette" />
@@ -1852,7 +1925,7 @@ export default function Mockups() {
               <Icon size={280} />
             </div>
             <p style={{ fontSize: '14px', color: '#64748b', textAlign: 'center', marginTop: '-28px', marginBottom: '48px' }}>
-              Four interlocking brackets: Slate (Expectation) - Teal (Systemization) - Blue (Realization) - Gold (Validation)
+              Four interlocking brackets: Slate (Expectation) - Teal (Systemization) - Gold (Realization) - Blue (Validation)
             </p>
 
             {/* Icon on backgrounds */}
@@ -1932,7 +2005,7 @@ export default function Mockups() {
   <path d="M234.9396,14.4758c-41.642,6.1394-73.6893,41.9703-73.6893,87.0485v178.0881c0,17.0624-13.0972,30.3923-28.814,30.3923-4.5505,0-8.8912-1.1272-12.753-3.1383,9.4599-4.9054,16.061-15.1429,16.061-27.254V101.5241c0-49.5875,38.7682-87.9776,86.4423-87.9776,4.326,0,8.5918.3199,12.753.9293Z" fill="#00bfa5"/>
               </svg>
               <p style={{ fontSize: '14px', color: '#64748b', textAlign: 'center', marginTop: '16px' }}>
-                Icon mark + "WhiteSpace Outcome Dynamics™" wordmark. Gray band grounds the second line.
+                Icon mark + "Outcome Dynamics™" wordmark. Gray band grounds the second line (Consult WhiteSpace).
               </p>
             </div>
 
@@ -2180,28 +2253,78 @@ export default function Mockups() {
             <div className="card-white">
             <ReviewBlock blockKey="voice:attributes" label="Voice Attributes" />
               <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#1e293b', marginBottom: '24px' }}>Messaging Dimensions</h3>
-              <div className="grid-3">
+              <div className="grid-4">
                 <div className="box accent-navy" style={{ paddingLeft: '28px' }}>
                   <h4 style={{ fontSize: '13px', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>Expectation</h4>
                   <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: '1.6' }}>Stop competing. Start commanding. Move from crowded markets to premium positioning.</p>
                 </div>
                 <div className="box accent-teal" style={{ paddingLeft: '28px' }}>
                   <h4 style={{ fontSize: '13px', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>Systemization</h4>
-                  <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: '1.6' }}>Structure creates value. Methodology transforms complexity into clarity.</p>
+                  <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: '1.6' }}>Structure creates differentiation. Methodology transforms how services are delivered and sold.</p>
                 </div>
                 <div className="box accent-gold" style={{ paddingLeft: '28px' }}>
                   <h4 style={{ fontSize: '13px', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>Realization</h4>
-                  <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: '1.6' }}>Monetize assets. Measure results. Deliver measurable impact.</p>
+                  <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: '1.6' }}>Revenue grows. Customer experience improves. Competitive differentiation emerges.</p>
+                </div>
+                <div className="box accent-blue" style={{ paddingLeft: '28px' }}>
+                  <h4 style={{ fontSize: '13px', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>Validation</h4>
+                  <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: '1.6' }}>Lock in gains. Know which metrics predict which outcomes. Scale with mathematical certainty.</p>
                 </div>
               </div>
             </div>
 
             <div className="card-white">
+              <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#1e293b', marginBottom: '16px' }}>Core Positioning Concept: Dark Space → White Space</h3>
+              <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.8', marginBottom: '20px', maxWidth: '760px' }}>
+                The fundamental framing of the WhiteSpace methodology. <strong style={{ color: '#1e293b' }}>Dark space</strong> is commoditized competition - where organizations compete on price, fight for the same customers, and have no clear differentiation. <strong style={{ color: '#1e293b' }}>White space</strong> is differentiated, premium positioning - where services are delivered, sold, and presented in ways that justify premium engagements and attract the right clients.
+              </p>
+              <div className="grid-2">
+                <div style={{ background: '#1e293b', borderRadius: '12px', padding: '28px' }}>
+                  <h4 style={{ fontSize: '14px', fontWeight: '600', color: '#94a3b8', marginBottom: '12px', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Dark Space</h4>
+                  <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.7', margin: 0 }}>Commoditized competition. Competing on price. Undifferentiated services. Race to the bottom on fees. No clear reason to choose you over anyone else.</p>
+                </div>
+                <div style={{ background: 'linear-gradient(135deg, #0f172a, #1a2744)', borderRadius: '12px', padding: '28px', border: '1px solid rgba(0,191,165,0.2)' }}>
+                  <h4 style={{ fontSize: '14px', fontWeight: '600', color: '#00bfa5', marginBottom: '12px', letterSpacing: '0.06em', textTransform: 'uppercase' }}>White Space</h4>
+                  <p style={{ fontSize: '13px', color: '#94a3b8', lineHeight: '1.7', margin: 0 }}>Premium differentiation. Compelling reason to choose you. Engagements that command higher fees. A system that makes the value undeniable.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-white">
+              <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>Three Dimensions of Change</h3>
+              <p style={{ fontSize: '13px', color: '#64748b', marginBottom: '20px' }}>The homepage framework - how Outcome Dynamics™ is introduced to prospective clients. Three interdependent dimensions that operate simultaneously.</p>
+              <div className="grid-3">
+                <div style={{ padding: '24px 20px', borderRadius: '12px', border: '1px solid #e2e8f0', position: 'relative', overflow: 'hidden' }}>
+                  <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: '#475569' }}></div>
+                  <div style={{ fontFamily: 'Lora, serif', fontSize: '32px', fontWeight: '300', color: '#475569', lineHeight: 1, marginBottom: '12px' }}>01</div>
+                  <h4 style={{ fontFamily: 'Lora, serif', fontSize: '18px', fontWeight: '500', color: '#0f172a', marginBottom: '10px' }}>Innovation</h4>
+                  <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.65', margin: 0 }}>Identifying and building differentiated approaches to how services are structured and delivered.</p>
+                </div>
+                <div style={{ padding: '24px 20px', borderRadius: '12px', border: '1px solid #e2e8f0', position: 'relative', overflow: 'hidden' }}>
+                  <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: '#00bfa5' }}></div>
+                  <div style={{ fontFamily: 'Lora, serif', fontSize: '32px', fontWeight: '300', color: '#00bfa5', lineHeight: 1, marginBottom: '12px' }}>02</div>
+                  <h4 style={{ fontFamily: 'Lora, serif', fontSize: '18px', fontWeight: '500', color: '#0f172a', marginBottom: '10px' }}>Transformation</h4>
+                  <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.65', margin: 0 }}>Restructuring how the organization operates so differentiated delivery is systematic, not accidental.</p>
+                </div>
+                <div style={{ padding: '24px 20px', borderRadius: '12px', border: '1px solid #e2e8f0', position: 'relative', overflow: 'hidden' }}>
+                  <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: '#fbbf24' }}></div>
+                  <div style={{ fontFamily: 'Lora, serif', fontSize: '32px', fontWeight: '300', color: '#fbbf24', lineHeight: 1, marginBottom: '12px' }}>03</div>
+                  <h4 style={{ fontFamily: 'Lora, serif', fontSize: '18px', fontWeight: '500', color: '#0f172a', marginBottom: '10px' }}>Execution</h4>
+                  <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.65', margin: 0 }}>Implementing with precision - measuring results, locking in gains, and scaling what works.</p>
+                </div>
+              </div>
+              <p style={{ fontSize: '12px', color: '#94a3b8', marginTop: '16px', fontStyle: 'italic' }}>Note: Three Dimensions (Innovation / Transformation / Execution) are the homepage entry point. Four Phases (Expectation → Systemization → Realization → Validation) are the engagement methodology on the Methodology page.</p>
+            </div>
+            <div className="card-white">
               <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#1e293b', marginBottom: '20px' }}>Primary Tagline</h3>
               <p style={{ fontFamily: 'Lora, serif', fontSize: '24px', fontWeight: '300', color: '#1e293b', marginBottom: '12px' }}>
                 "Master the System That Turns Competitive Markets Into Premium Positioning"
               </p>
-              <p style={{ fontSize: '13px', color: '#64748b' }}>Primary tagline - consultant-facing. For client-facing contexts, use: "See Your Organizational Assets Clearly."</p>
+              <p style={{ fontSize: '13px', color: '#64748b', marginBottom: '24px' }}>Primary tagline - consultant-facing (brand guide, certification outreach). For client-facing contexts, use: "Transforming how organizations think about change, value creation, and competitive positioning."</p>
+              <h4 style={{ fontSize: '13px', fontWeight: '600', color: '#dc2626', marginBottom: '12px' }}>Prohibited Vocabulary</h4>
+              <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.7', margin: 0 }}>
+                Never use: "hidden assets," "hidden value," "undervalued assets," "unrealized value," "cost reduction," "cost cutting," or any framing that positions the methodology as uncovering overlooked resources. The methodology is about competitive differentiation and premium positioning - how services are delivered, sold, and presented.
+              </p>
             </div>
             <ReviewBlock blockKey="voice:general" label="General Feedback" />
           </>
@@ -2260,7 +2383,7 @@ export default function Mockups() {
           <>
             <h2 className="section-title">Certification Program</h2>
             <p className="section-subtitle">
-              A highly selective program for consultants who want to master the Value Collaborator System™. Below: how the brand system creates a cohesive, modular training experience.
+              A highly selective program for consultants who want to master the Value Component System™. Below: how the brand system creates a cohesive, modular training experience.
             </p>
 
             {/* Program header card */}
@@ -2269,8 +2392,8 @@ export default function Mockups() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
                   <Icon size={48} />
                   <div>
-                    <h2>WhiteSpace Clarity Certification</h2>
-                    <p>Master the Value Collaborator System™. Transform how organizations see their assets.</p>
+                    <h2>Outcome Dynamics™ Certification</h2>
+                    <p>Master the Value Component System™. Transform how organizations compete, differentiate, and grow.</p>
                   </div>
                 </div>
               </div>
@@ -2294,7 +2417,7 @@ export default function Mockups() {
             <div className="card-white">
               <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>Why Selective?</h3>
               <p style={{ fontSize: '14px', color: '#475569', lineHeight: '1.8', maxWidth: '700px' }}>
-                The WhiteSpace Clarity Certification is not a commodity credential. Each candidate is personally vetted to ensure they have the experience, mindset, and commitment to represent the methodology at the highest level. This selectivity is what makes certified consultants immediately credible with enterprise clients.
+                The Outcome Dynamics™ Certification is not a commodity credential. Each candidate is personally vetted to ensure they have the experience, mindset, and commitment to represent the methodology at the highest level. This selectivity is what makes certified consultants immediately credible with enterprise clients.
               </p>
             </div>
             <ReviewBlock blockKey="certification:selectivity" label="Selectivity & Positioning" />
@@ -2310,10 +2433,10 @@ export default function Mockups() {
               <h4 style={{ fontSize: '13px', fontWeight: '600', color: '#64748b', marginBottom: '16px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Module Cards</h4>
               <div className="grid-3" style={{ marginBottom: '48px' }}>
                 {[
-                  { num: '01', title: 'Expectation', subtitle: 'Asset Discovery & Valuation', color: '#475569', progress: 100 },
-                  { num: '02', title: 'Systemization', subtitle: 'Framework Integration', color: '#00bfa5', progress: 65 },
-                  { num: '03', title: 'Realization', subtitle: 'Value Conversion & Measurement', color: '#2563eb', progress: 0 },
-                  { num: '04', title: 'Validation', subtitle: 'Outcomes Prediction & Scale', color: '#fbbf24', progress: 0 },
+                  { num: '01', title: 'Expectation', subtitle: 'Competitive Clarity & Positioning Gap', color: '#475569', progress: 100 },
+                  { num: '02', title: 'Systemization', subtitle: 'Methodology & System Design', color: '#00bfa5', progress: 65 },
+                  { num: '03', title: 'Realization', subtitle: 'Execution & Measurable Outcomes', color: '#fbbf24', progress: 0 },
+                  { num: '04', title: 'Validation', subtitle: 'Prediction, Scale & Certainty', color: '#2563eb', progress: 0 },
                 ].map((mod, i) => (
                   <div key={i} style={{ background: 'white', border: '1px solid #e2e8f0', borderRadius: '12px', overflow: 'hidden', transition: 'all 0.2s ease' }}>
                     <div style={{ height: '4px', background: mod.color }}></div>
@@ -2366,7 +2489,7 @@ export default function Mockups() {
                   {/* Sidebar */}
                   <div style={{ borderLeft: '1px solid #f1f5f9', paddingLeft: '32px' }}>
                     <p style={{ fontSize: '11px', fontWeight: '600', color: '#1e293b', letterSpacing: '0.5px', textTransform: 'uppercase', marginBottom: '16px' }}>In This Lesson</p>
-                    {['Asset mapping framework', 'Dependency identification', 'Value flow analysis', 'Bottleneck diagnosis'].map((item, i) => (
+                    {['Competitive positioning framework', 'Differentiation system design', 'Value flow architecture', 'Market gap diagnosis'].map((item, i) => (
                       <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
                         <div style={{ width: '18px', height: '18px', borderRadius: '4px', border: i < 2 ? 'none' : '2px solid #e2e8f0', background: i < 2 ? '#00bfa5' : 'transparent', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '10px', flexShrink: 0 }}>{i < 2 ? '\u2713' : ''}</div>
                         <span style={{ fontSize: '13px', color: i < 2 ? '#1e293b' : '#64748b' }}>{item}</span>
@@ -2394,8 +2517,8 @@ export default function Mockups() {
                 {[
                   { label: 'Expectation', color: '#475569', pct: 100 },
                   { label: 'Systemization', color: '#00bfa5', pct: 65 },
-                  { label: 'Realization', color: '#2563eb', pct: 0 },
-                  { label: 'Validation', color: '#fbbf24', pct: 0 },
+                  { label: 'Realization', color: '#fbbf24', pct: 0 },
+                  { label: 'Validation', color: '#2563eb', pct: 0 },
                 ].map((p, i) => (
                   <div key={i} style={{ marginBottom: '20px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
@@ -2454,7 +2577,7 @@ export default function Mockups() {
                     <p style={{ fontFamily: 'Lora, serif', fontSize: '16px', fontWeight: '300', color: '#1e293b', lineHeight: '1.6', fontStyle: 'italic', textAlign: 'left', margin: 0 }}>
                       "The best consultants don't just see assets - they see the connections between them."
                     </p>
-                    <p style={{ fontSize: '12px', color: '#64748b', textAlign: 'left', marginTop: '8px' }}>- Bill Adams, Outcome Dynamics™</p>
+                    <p style={{ fontSize: '12px', color: '#64748b', textAlign: 'left', marginTop: '8px' }}>- Bill Adams Jr., Outcome Dynamics™</p>
                   </div>
                   <p style={{ fontSize: '12px', color: '#94a3b8', marginTop: '12px' }}>Gradient bracket line for attributed quotes</p>
                 </div>
@@ -2505,9 +2628,9 @@ export default function Mockups() {
                     </div>
                     <div>
                       <p style={{ fontFamily: 'Lora, serif', fontSize: '15px', fontWeight: '400', color: '#1e293b', margin: '0 0 2px 0' }}>Steve Smith</p>
-                      <p style={{ fontSize: '12px', color: '#475569', margin: '0 0 10px 0' }}>Managing Partner, Consult WhiteSpace</p>
+                      <p style={{ fontSize: '12px', color: '#475569', margin: '0 0 10px 0' }}>CEO, Consult WhiteSpace</p>
                       <div style={{ fontSize: '11px', color: '#64748b', lineHeight: '1.8' }}>
-                        steve@consultwhitespace.com<br/>
+                        steve@whitespacellc.com<br/>
                         (555) 123-4567
                       </div>
                       <div style={{ display: 'flex', gap: '6px', marginTop: '10px' }}>
@@ -2515,23 +2638,23 @@ export default function Mockups() {
                         <div style={{ height: '2px', width: '16px', background: '#00bfa5', borderRadius: '1px' }}></div>
                         <div style={{ height: '2px', width: '16px', background: '#fbbf24', borderRadius: '1px' }}></div>
                       </div>
-                      <p style={{ fontSize: '10px', color: '#94a3b8', marginTop: '8px', fontStyle: 'italic' }}>WhiteSpace Outcome Dynamics™ - consultwhitespace.com</p>
+                      <p style={{ fontSize: '10px', color: '#94a3b8', marginTop: '8px', fontStyle: 'italic' }}>Outcome Dynamics™ - whitespacellc.com</p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="card-white" style={{ margin: 0 }}>
-                <p style={{ fontSize: '11px', fontWeight: '600', color: '#64748b', letterSpacing: '0.5px', textTransform: 'uppercase', marginBottom: '16px' }}>Bill Adams</p>
+                <p style={{ fontSize: '11px', fontWeight: '600', color: '#64748b', letterSpacing: '0.5px', textTransform: 'uppercase', marginBottom: '16px' }}>Bill Adams Jr.</p>
                 <div style={{ background: '#fafafa', borderRadius: '8px', padding: '24px' }}>
                   <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
                     <div style={{ borderRight: '2px solid #00bfa5', paddingRight: '16px', flexShrink: 0 }}>
                       <Icon size={36} />
                     </div>
                     <div>
-                      <p style={{ fontFamily: 'Lora, serif', fontSize: '15px', fontWeight: '400', color: '#1e293b', margin: '0 0 2px 0' }}>Bill Adams</p>
-                      <p style={{ fontSize: '12px', color: '#475569', margin: '0 0 10px 0' }}>Founder, Value Collaborator System™</p>
+                      <p style={{ fontFamily: 'Lora, serif', fontSize: '15px', fontWeight: '400', color: '#1e293b', margin: '0 0 2px 0' }}>Bill Adams Jr.</p>
+                      <p style={{ fontSize: '12px', color: '#475569', margin: '0 0 10px 0' }}>Founder, Value Component System™</p>
                       <div style={{ fontSize: '11px', color: '#64748b', lineHeight: '1.8' }}>
-                        bill@consultwhitespace.com<br/>
+                        bill@whitespacellc.com<br/>
                         (555) 987-6543
                       </div>
                       <div style={{ display: 'flex', gap: '6px', marginTop: '10px' }}>
@@ -2581,7 +2704,7 @@ export default function Mockups() {
                     </div>
                     <Icon size={28} />
                     <p style={{ fontFamily: 'Lora, serif', fontSize: '20px', fontWeight: '300', color: 'white', margin: '16px 0 4px 0', lineHeight: '1.3' }}>The framework your clients have been waiting for.</p>
-                    <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0 }}>The WhiteSpace Outcome Dynamics™</p>
+                    <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0 }}>Outcome Dynamics™ Methodology</p>
                   </div>
                   {/* Email body */}
                   <div style={{ padding: '28px 32px' }}>
@@ -2593,9 +2716,9 @@ export default function Mockups() {
                     {/* Three dimension callouts */}
                     <div style={{ display: 'flex', gap: '12px', marginBottom: '24px' }}>
                       {[
-                        { label: 'Discover', color: '#475569' },
-                        { label: 'Integrate', color: '#00bfa5' },
-                        { label: 'Convert', color: '#fbbf24' },
+                        { label: 'Innovation', color: '#475569' },
+                        { label: 'Transformation', color: '#00bfa5' },
+                        { label: 'Execution', color: '#fbbf24' },
                       ].map((p, i) => (
                         <div key={i} style={{ flex: 1, textAlign: 'center', padding: '12px 8px', borderTop: `3px solid ${p.color}`, background: '#f8fafc', borderRadius: '0 0 6px 6px' }}>
                           <p style={{ fontSize: '11px', fontWeight: '600', color: p.color, margin: 0 }}>{p.label}</p>
@@ -2614,14 +2737,14 @@ export default function Mockups() {
                   {/* Email footer */}
                   <div style={{ padding: '20px 32px', borderTop: '1px solid #f1f5f9', textAlign: 'center' }}>
                     <Icon size={20} />
-                    <p style={{ fontSize: '10px', color: '#94a3b8', margin: '6px 0 0 0' }}>Consult WhiteSpace LLC - consultwhitespace.com</p>
+                    <p style={{ fontSize: '10px', color: '#94a3b8', margin: '6px 0 0 0' }}>Consult WhiteSpace LLC - whitespacellc.com</p>
                   </div>
                 </div>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <div className="card-white" style={{ margin: 0, flex: 1 }}>
                   <h4 style={{ fontSize: '13px', fontWeight: '600', color: '#1e293b', marginBottom: '12px' }}>Layout Structure</h4>
-                  {['Dark gradient header with icon and headline', 'Body text: 2-3 short paragraphs max', 'Three-dimension callout strip (Discover / Integrate / Convert)', 'Single primary CTA button (Blue #2563eb)', 'Centered footer with icon and company link'].map((item, i) => (
+                  {['Dark gradient header with icon and headline', 'Body text: 2-3 short paragraphs max', 'Three-dimension callout strip (Innovation / Transformation / Execution)', 'Single primary CTA button (Blue #2563eb)', 'Centered footer with icon and company link'].map((item, i) => (
                     <div key={i} className="checklist-item" style={{ marginBottom: '10px' }}>
                       <div className="checklist-icon">{'\u2713'}</div>
                       <div className="checklist-text" style={{ fontSize: '13px' }}>{item}</div>
@@ -2631,7 +2754,7 @@ export default function Mockups() {
                 <div className="card-white" style={{ margin: 0 }}>
                   <h4 style={{ fontSize: '13px', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>Subject Line Guidelines</h4>
                   <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.7', margin: 0 }}>
-                    Lead with insight or question, not company name. Keep under 50 characters. No exclamation marks, no ALL CAPS. Examples: "The asset gap most consultants miss" or "What if your methodology had a system behind it?"
+                    Lead with insight or question, not company name. Keep under 50 characters. No exclamation marks, no ALL CAPS. Examples: "Why most consultants compete on price" or "What if your methodology had a system behind it?"
                   </p>
                 </div>
               </div>
@@ -2648,15 +2771,17 @@ export default function Mockups() {
                       <Icon size={160} />
                     </div>
                     <div style={{ display: 'flex', gap: '20px', alignItems: 'center', position: 'relative', zIndex: 1 }}>
-                      {/* Book mockup */}
-                      <div style={{ width: '80px', height: '110px', background: 'linear-gradient(135deg, #1e293b, #0f172a)', borderRadius: '3px', boxShadow: '6px 3px 16px rgba(0,0,0,0.3)', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '12px', flexShrink: 0, border: '1px solid rgba(255,255,255,0.08)' }}>
-                        <Icon size={18} />
-                        <p style={{ fontFamily: 'Lora, serif', fontSize: '8px', fontWeight: '400', color: 'white', textAlign: 'center', marginTop: '6px', lineHeight: '1.3' }}>Outcome Dynamics™</p>
-                      </div>
+                      {/* Book cover */}
+                      <img
+                        src="data:image/jpeg;base64,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"
+                        alt="Outcome Dynamics book cover"
+                        style={{ width: '72px', height: '100px', objectFit: 'cover', borderRadius: '3px', boxShadow: '6px 3px 16px rgba(0,0,0,0.35)', flexShrink: 0 }}
+                      />
                       <div>
                         <p style={{ fontSize: '10px', fontWeight: '600', color: '#fbbf24', letterSpacing: '1px', textTransform: 'uppercase', margin: '0 0 6px 0' }}>Coming September 2026</p>
-                        <p style={{ fontFamily: 'Lora, serif', fontSize: '18px', fontWeight: '300', color: 'white', lineHeight: '1.3', margin: '0 0 4px 0' }}>Outcome Dynamics™</p>
-                        <p style={{ fontSize: '11px', color: '#cbd5e1', margin: 0 }}>By Bill Adams - Forbes Books</p>
+                        <p style={{ fontFamily: 'Lora, serif', fontSize: '18px', fontWeight: '300', color: 'white', lineHeight: '1.3', margin: '0 0 2px 0' }}>Outcome Dynamics™</p>
+                        <p style={{ fontFamily: 'Lora, serif', fontSize: '12px', fontWeight: '300', color: 'rgba(255,255,255,0.7)', lineHeight: '1.3', margin: '0 0 6px 0', fontStyle: 'italic' }}>Solving The Business Performance Puzzle</p>
+                        <p style={{ fontSize: '11px', color: '#cbd5e1', margin: 0 }}>By Bill Adams Jr. - Forbes Books</p>
                       </div>
                     </div>
                   </div>
@@ -2667,9 +2792,10 @@ export default function Mockups() {
                     <div style={{ height: '10px', background: '#f1f5f9', borderRadius: '3px', marginBottom: '24px', width: '70%' }}></div>
 
                     <div style={{ borderLeft: '3px solid #fbbf24', paddingLeft: '16px', marginBottom: '24px' }}>
-                      <p style={{ fontFamily: 'Lora, serif', fontSize: '14px', fontWeight: '300', color: '#1e293b', fontStyle: 'italic', lineHeight: '1.6', margin: 0 }}>
-                        "Organizations sit on millions in unrealized value - not because they lack resources, but because they lack clarity."
+                      <p style={{ fontFamily: 'Lora, serif', fontSize: '14px', fontWeight: '300', color: '#1e293b', fontStyle: 'italic', lineHeight: '1.6', margin: '0 0 6px 0' }}>
+                        "The gap between where most organizations compete and where they could compete is not a resource gap. It's a system gap."
                       </p>
+                      <p style={{ fontSize: '11px', color: '#94a3b8', margin: 0 }}>- Bill Adams Jr., Outcome Dynamics™</p>
                     </div>
 
                     <div style={{ textAlign: 'center' }}>
@@ -2678,7 +2804,7 @@ export default function Mockups() {
                   </div>
                   <div style={{ padding: '20px 32px', borderTop: '1px solid #f1f5f9', textAlign: 'center' }}>
                     <Icon size={20} />
-                    <p style={{ fontSize: '10px', color: '#94a3b8', margin: '6px 0 0 0' }}>Consult WhiteSpace LLC - consultwhitespace.com</p>
+                    <p style={{ fontSize: '10px', color: '#94a3b8', margin: '6px 0 0 0' }}>Consult WhiteSpace LLC - whitespacellc.com</p>
                   </div>
                 </div>
               </div>
@@ -2742,7 +2868,7 @@ export default function Mockups() {
                   </div>
                   <div style={{ padding: '20px 32px', borderTop: '1px solid #f1f5f9', textAlign: 'center' }}>
                     <Icon size={20} />
-                    <p style={{ fontSize: '10px', color: '#94a3b8', margin: '6px 0 0 0' }}>Consult WhiteSpace LLC - consultwhitespace.com</p>
+                    <p style={{ fontSize: '10px', color: '#94a3b8', margin: '6px 0 0 0' }}>Consult WhiteSpace LLC - whitespacellc.com</p>
                   </div>
                 </div>
               </div>
@@ -2839,7 +2965,7 @@ export default function Mockups() {
                   <tr>
                     <td style={{ fontWeight: '600' }}>Certification Complete</td>
                     <td>Dark gradient + certificate preview</td>
-                    <td>All three dimensions passed</td>
+                    <td>All four phases passed</td>
                     <td>Download Your Certificate</td>
                   </tr>
                 </tbody>
@@ -2875,7 +3001,7 @@ export default function Mockups() {
                     <p style={{ fontFamily: 'Lora, serif', fontSize: '22px', fontWeight: '300', color: 'white', lineHeight: '1.4', margin: '0 0 16px 0', maxWidth: '320px' }}>
                       Most organizations undervalue what they already have.
                     </p>
-                    <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0 }}>Bill Adams - Outcome Dynamics™</p>
+                    <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0 }}>Bill Adams Jr. - Outcome Dynamics™</p>
                   </div>
                 </div>
                 {/* Post caption preview */}
@@ -2921,7 +3047,7 @@ export default function Mockups() {
                     <Icon size={32} />
                     <p style={{ fontSize: '11px', fontWeight: '600', color: '#00bfa5', letterSpacing: '0.5px', textTransform: 'uppercase', margin: '16px 0 8px 0' }}>Now Certified</p>
                     <p style={{ fontFamily: 'Lora, serif', fontSize: '24px', fontWeight: '300', color: '#1e293b', lineHeight: '1.3', margin: '0 0 8px 0' }}>Jane Davidson</p>
-                    <p style={{ fontSize: '13px', color: '#64748b', margin: '0 0 20px 0' }}>WhiteSpace Outcome Dynamics™ - Cohort 2026-A</p>
+                    <p style={{ fontSize: '13px', color: '#64748b', margin: '0 0 20px 0' }}>Outcome Dynamics™ - Cohort 2026-A</p>
                     <div style={{ display: 'flex', gap: '16px' }}>
                       {['Expectation', 'Systemization', 'Realization', 'Validation'].map((p, i) => (
                         <span key={i} style={{ fontSize: '10px', fontWeight: '600', color: ['#475569', '#00bfa5', '#d97706'][i], background: ['#47556910', '#00bfa510', '#fbbf2410'][i], padding: '4px 10px', borderRadius: '12px' }}>{p}</span>
@@ -2966,7 +3092,7 @@ export default function Mockups() {
                     <div style={{ width: '120px', height: '160px', background: 'linear-gradient(135deg, #1e293b, #0f172a)', borderRadius: '4px', boxShadow: '8px 4px 20px rgba(0,0,0,0.3)', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '16px', flexShrink: 0, border: '1px solid rgba(255,255,255,0.1)' }}>
                       <Icon size={24} />
                       <p style={{ fontFamily: 'Lora, serif', fontSize: '11px', fontWeight: '400', color: 'white', textAlign: 'center', marginTop: '8px', lineHeight: '1.2' }}>Outcome Dynamics™</p>
-                      <p style={{ fontSize: '7px', color: '#94a3b8', textAlign: 'center', marginTop: '4px' }}>Bill Adams</p>
+                      <p style={{ fontSize: '10px', color: '#94a3b8', margin: 0, fontStyle: 'italic' }}>by Bill Adams Jr.</p>
                     </div>
                     <div>
                       <p style={{ fontSize: '10px', fontWeight: '600', color: '#fbbf24', letterSpacing: '1px', textTransform: 'uppercase', margin: '0 0 8px 0' }}>September 2026</p>
@@ -3009,11 +3135,11 @@ export default function Mockups() {
                   <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
                     <div style={{ position: 'absolute', top: '16px', left: '16px', display: 'flex', alignItems: 'center', gap: '8px', zIndex: 2 }}>
                       <Icon size={20} />
-                      <span style={{ fontSize: '10px', color: 'rgba(255,255,255,0.6)', fontWeight: '500' }}>WhiteSpace Outcome Dynamics™</span>
+                      <span style={{ fontSize: '10px', color: 'rgba(255,255,255,0.6)', fontWeight: '500' }}>Outcome Dynamics™ | Consult WhiteSpace</span>
                     </div>
                     <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', background: 'linear-gradient(transparent, rgba(0,0,0,0.8))', padding: '40px 24px 20px 24px', zIndex: 2 }}>
                       <p style={{ fontFamily: 'Lora, serif', fontSize: '16px', fontWeight: '300', color: 'white', margin: '0 0 4px 0' }}>Why Consultants Leave McKinsey</p>
-                      <p style={{ fontSize: '11px', color: '#94a3b8', margin: 0 }}>Steve Smith & Bill Adams - Episode 3</p>
+                      <p style={{ fontSize: '11px', color: '#94a3b8', margin: 0 }}>Steve Smith & Bill Adams Jr. - Episode 3</p>
                     </div>
                     {/* Play button */}
                     <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid rgba(255,255,255,0.3)', zIndex: 2 }}>
@@ -3035,7 +3161,7 @@ export default function Mockups() {
                   <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.7', margin: '0 0 16px 0' }}>
                     6-episode series tied to the Outcome Dynamics™ launch. Each episode maps to the methodology and builds toward the certification pitch.
                   </p>
-                  {['Competitive differentiation', 'Client story as proof', 'Methodology deep-dive', 'Asset discovery walkthrough', 'Book preview / key insights', 'Certification program overview'].map((ep, i) => (
+                  {['Competitive differentiation', 'Client story as proof', 'Methodology deep-dive', 'Positioning gap walkthrough', 'Book preview / key insights', 'Certification program overview'].map((ep, i) => (
                     <div key={i} style={{ display: 'flex', gap: '10px', marginBottom: '8px', alignItems: 'center' }}>
                       <span style={{ fontSize: '10px', fontWeight: '600', color: ['#475569', '#00bfa5', '#475569', '#00bfa5', '#d97706', '#475569'][i], background: ['#47556910', '#00bfa510', '#47556910', '#00bfa510', '#fbbf2410', '#47556910'][i], padding: '2px 8px', borderRadius: '4px', flexShrink: 0 }}>EP {i + 1}</span>
                       <span style={{ fontSize: '12px', color: '#64748b' }}>{ep}</span>
@@ -3052,7 +3178,7 @@ export default function Mockups() {
                 <div className="do-card">
                   <h4 style={{ color: '#16a34a', fontWeight: '600', fontSize: '13px', marginBottom: '12px' }}>{'\u2713'} DO</h4>
                   <p style={{ fontSize: '13px', color: '#475569', margin: 0, lineHeight: '1.7' }}>
-                    Lead with insight over promotion. Use client outcomes as proof points. Reference the three dimensions by name. Tag certified consultants. Link to discovery conversations.
+                    Lead with insight over promotion. Use client outcomes as proof points. Reference the Three Dimensions by name (Innovation, Transformation, Execution) or the four phases (Expectation, Systemization, Realization, Validation). Tag certified consultants. Link to discovery conversations.
                   </p>
                 </div>
                 <div className="dont-card">
@@ -3097,13 +3223,13 @@ export default function Mockups() {
 
                 <div style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
                   <Icon size={40} />
-                  <p style={{ fontSize: '10px', fontWeight: '600', color: '#64748b', letterSpacing: '2px', textTransform: 'uppercase', margin: '16px 0 4px 0' }}>WhiteSpace Outcome Dynamics™</p>
+                  <p style={{ fontSize: '10px', fontWeight: '600', color: '#64748b', letterSpacing: '2px', textTransform: 'uppercase', margin: '16px 0 4px 0' }}>Consult WhiteSpace LLC</p>
                   <p style={{ fontFamily: 'Lora, serif', fontSize: '28px', fontWeight: '300', color: '#1e293b', margin: '24px 0 8px 0' }}>Certificate of Completion</p>
                   <p style={{ fontSize: '14px', color: '#64748b', margin: '0 0 32px 0' }}>This certifies that</p>
 
                   <p style={{ fontFamily: 'Lora, serif', fontSize: '36px', fontWeight: '400', color: '#1e293b', margin: '0 0 8px 0', borderBottom: '1px solid #e2e8f0', paddingBottom: '8px', display: 'inline-block', minWidth: '300px' }}>Jane Davidson</p>
                   <p style={{ fontSize: '14px', color: '#64748b', margin: '16px 0 32px 0', lineHeight: '1.7', maxWidth: '480px', marginLeft: 'auto', marginRight: 'auto' }}>
-                    has successfully completed all requirements of the WhiteSpace Clarity Certification program and demonstrated mastery of the Value Collaborator System™.
+                    has successfully completed all requirements of the Outcome Dynamics™ Certification program and demonstrated mastery of the Value Component System™.
                   </p>
 
                   {/* Pillar badges */}
@@ -3112,6 +3238,7 @@ export default function Mockups() {
                       { label: 'Expectation', color: '#475569' },
                       { label: 'Systemization', color: '#00bfa5' },
                       { label: 'Realization', color: '#fbbf24' },
+                      { label: 'Validation', color: '#2563eb' },
                     ].map((p, i) => (
                       <div key={i} style={{ textAlign: 'center' }}>
                         <div style={{ width: '48px', height: '48px', borderRadius: '50%', border: `2px solid ${p.color}`, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 6px auto' }}>
@@ -3127,12 +3254,12 @@ export default function Mockups() {
                     <div style={{ textAlign: 'center' }}>
                       <div style={{ borderBottom: '1px solid #cbd5e1', width: '160px', marginBottom: '8px', height: '24px' }}></div>
                       <p style={{ fontSize: '12px', fontWeight: '600', color: '#1e293b', margin: '0 0 2px 0' }}>Steve Smith</p>
-                      <p style={{ fontSize: '11px', color: '#64748b', margin: 0 }}>Managing Partner</p>
+                      <p style={{ fontSize: '11px', color: '#64748b', margin: 0 }}>CEO, Consult WhiteSpace</p>
                     </div>
                     <div style={{ textAlign: 'center' }}>
                       <div style={{ borderBottom: '1px solid #cbd5e1', width: '160px', marginBottom: '8px', height: '24px' }}></div>
-                      <p style={{ fontSize: '12px', fontWeight: '600', color: '#1e293b', margin: '0 0 2px 0' }}>Bill Adams</p>
-                      <p style={{ fontSize: '11px', color: '#64748b', margin: 0 }}>Founder, Value Collaborator System™</p>
+                      <p style={{ fontSize: '12px', fontWeight: '600', color: '#1e293b', margin: '0 0 2px 0' }}>Bill Adams Jr.</p>
+                      <p style={{ fontSize: '11px', color: '#64748b', margin: 0 }}>Founder, Value Component System™</p>
                     </div>
                   </div>
 
@@ -3194,7 +3321,7 @@ export default function Mockups() {
                 <div className="dont-card">
                   <h4 style={{ color: '#dc2626', fontWeight: '600', fontSize: '13px', marginBottom: '12px' }}>{'\u2717'} Not Permitted</h4>
                   <p style={{ fontSize: '13px', color: '#475569', margin: 0, lineHeight: '1.7' }}>
-                    Modifying the badge colors or layout. Claiming certification without completing all three dimensions. Using "WhiteSpace Certified" without the full credential ID. Displaying an expired credential.
+                    Modifying the badge colors or layout. Claiming certification without completing all four phases. Using "Outcome Dynamics™ Certified" without the full credential ID. Displaying an expired credential.
                   </p>
                 </div>
               </div>
@@ -3273,13 +3400,13 @@ export default function Mockups() {
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(to right, #475569 30%, #00bfa5 30%, #00bfa5 55%, #475569 55%, #475569 75%, #fbbf24 75%)' }}></div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                   <div style={{ maxWidth: '55%' }}>
-                    <p style={{ fontFamily: 'Lora, serif', fontSize: '24px', fontWeight: '300', color: '#1e293b', margin: '0 0 24px 0' }}>Asset Mapping Results</p>
+                    <p style={{ fontFamily: 'Lora, serif', fontSize: '24px', fontWeight: '300', color: '#1e293b', margin: '0 0 24px 0' }}>Differentiation Mapping Results</p>
                     <div style={{ borderLeft: '3px solid #00bfa5', paddingLeft: '16px', marginBottom: '16px' }}>
                       <p style={{ fontSize: '13px', color: '#475569', lineHeight: '1.7', margin: 0 }}>
-                        Analysis revealed 14 underutilized assets across three business units, representing an estimated $2.4M in unrealized annual value.
+                        Analysis identified three areas where service delivery, positioning, and customer experience could be restructured to command premium pricing across all business units.
                       </p>
                     </div>
-                    {['Customer relationship data', 'Process IP and workflows', 'Brand equity in adjacent markets'].map((item, i) => (
+                    {['Customer experience redesign', 'Service delivery differentiation', 'Premium positioning strategy'].map((item, i) => (
                       <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
                         <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: ['#475569', '#00bfa5', '#fbbf24'][i], flexShrink: 0 }}></div>
                         <span style={{ fontSize: '14px', color: '#1e293b' }}>{item}</span>
@@ -3289,9 +3416,9 @@ export default function Mockups() {
                   <div style={{ width: '35%', background: '#f8fafc', borderRadius: '8px', padding: '24px' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                       {[
-                        { label: 'Identified', value: '14', color: '#475569' },
-                        { label: 'In System', value: '8', color: '#00bfa5' },
-                        { label: 'Monetized', value: '3', color: '#fbbf24' },
+                        { label: 'Gaps Identified', value: '14', color: '#475569' },
+                        { label: 'In Progress', value: '8', color: '#00bfa5' },
+                        { label: 'Realized', value: '3', color: '#fbbf24' },
                       ].map((stat, i) => (
                         <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                           <span style={{ fontSize: '12px', color: '#64748b' }}>{stat.label}</span>
@@ -3330,7 +3457,7 @@ export default function Mockups() {
                   ))}
                 </div>
                 <div style={{ display: 'flex', gap: '24px', marginTop: '16px' }}>
-                  {[{ label: 'Expectation', color: '#475569' }, { label: 'Systemization', color: '#00bfa5' }, { label: 'Realization', color: '#fbbf24' }].map((l, i) => (
+                  {[{ label: 'Expectation', color: '#475569' }, { label: 'Systemization', color: '#00bfa5' }, { label: 'Realization', color: '#fbbf24' }, { label: 'Validation', color: '#2563eb' }].map((l, i) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <div style={{ width: '10px', height: '10px', borderRadius: '2px', background: l.color }}></div>
                       <span style={{ fontSize: '11px', color: '#64748b' }}>{l.label}</span>
@@ -3375,7 +3502,7 @@ export default function Mockups() {
           <>
             <h2 className="section-title">Workshop</h2>
             <p className="section-subtitle">
-              Full-day workshop structure aligned to the three dimensions. Facilitator guide, session breakdown, and materials checklist.
+              Full-day workshop structure aligned to the four phases. Facilitator guide, session breakdown, and materials checklist.
             </p>
 
             {/* Workshop overview card */}
@@ -3384,8 +3511,8 @@ export default function Mockups() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                   <Icon size={36} />
                   <div>
-                    <h2>Asset Discovery & Valuation Workshop</h2>
-                    <p>A structured full-day engagement using the WhiteSpace Outcome Dynamics™</p>
+                    <h2>Competitive Positioning Workshop</h2>
+                    <p>A structured full-day engagement using the Outcome Dynamics™ methodology</p>
                   </div>
                 </div>
               </div>
@@ -3412,18 +3539,17 @@ export default function Mockups() {
             {/* Agenda timeline */}
             <h3 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '16px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Full-Day Agenda</h3>
 
-            {/* Morning - Expectation */}
             <div style={{ marginBottom: '24px' }}>
               {[
-                { time: '8:30 - 9:00', title: 'Welcome & Framework Introduction', desc: 'Overview of the day, introductions, and the three-dimension methodology explained.', color: '#475569', pillar: null },
-                { time: '9:00 - 10:30', title: 'Session 1: Expectation - Asset Discovery', desc: 'Guided inventory of organizational assets. Participants map what exists across people, processes, IP, relationships, and brand equity.', color: '#475569', pillar: 'Expectation' },
-                { time: '10:30 - 10:45', title: 'Break', desc: null, color: '#e2e8f0', dimension: null },
-                { time: '10:45 - 12:00', title: 'Session 1 (cont.): Asset Valuation', desc: 'Each identified asset is scored on current utilization, potential value, and accessibility. The Asset Gap Map is produced.', color: '#475569', pillar: 'Expectation' },
-                { time: '12:00 - 1:00', title: 'Lunch', desc: null, color: '#e2e8f0', dimension: null },
-                { time: '1:00 - 2:30', title: 'Session 2: Systemization - Integration Mapping', desc: 'Participants connect assets into systems. Identify dependencies, bottlenecks, and multiplication opportunities. The Asset System Map is produced.', color: '#00bfa5', pillar: 'Systemization' },
-                { time: '2:30 - 2:45', title: 'Break', desc: null, color: '#e2e8f0', dimension: null },
-                { time: '2:45 - 4:00', title: 'Session 3: Realization - Value Conversion Plan', desc: 'Transform the System Map into actionable initiatives. Each asset system gets a 90-day conversion plan with measurable outcomes.', color: '#fbbf24', pillar: 'Realization' },
-                { time: '4:00 - 4:30', title: 'Action Plan & Close', desc: 'Consolidated action plan delivered. Next steps, accountability assignments, and follow-up schedule established.', color: '#2563eb', pillar: null },
+                { time: '8:30 - 9:00',   title: 'Welcome & Framework Introduction',               desc: 'Overview of the day, introductions, and the Outcome Dynamics™ four-phase methodology explained.',                                                                                           color: '#475569', pillar: null },
+                { time: '9:00 - 10:30',  title: 'Session 1: Expectation - Competitive Clarity',   desc: 'Leadership maps the current competitive position, where the organization competes on price vs. differentiation, and what the path to premium positioning looks like.',                     color: '#475569', pillar: 'Expectation' },
+                { time: '10:30 - 10:45', title: 'Break',                                           desc: null,                                                                                                                                                                                    color: '#e2e8f0', pillar: null },
+                { time: '10:45 - 12:00', title: 'Session 1 (cont.): Positioning Gap Analysis',    desc: 'Each service line is evaluated on its current differentiation and the specific changes to delivery, presentation, and positioning that would justify premium engagements.',                color: '#475569', pillar: 'Expectation' },
+                { time: '12:00 - 1:00',  title: 'Lunch',                                          desc: null,                                                                                                                                                                                    color: '#e2e8f0', pillar: null },
+                { time: '1:00 - 2:30',   title: 'Session 2: Systemization - System Design',       desc: 'Participants redesign how the organization operates - team interactions, decision authority, feedback loops, and incentive alignment. The Differentiation System Map is produced.',       color: '#00bfa5', pillar: 'Systemization' },
+                { time: '2:30 - 2:45',   title: 'Break',                                          desc: null,                                                                                                                                                                                    color: '#e2e8f0', pillar: null },
+                { time: '2:45 - 4:00',   title: 'Session 3: Realization - 90-Day Execution Plan', desc: 'Transform the System Map into prioritized initiatives. Each area of the organization gets an execution plan with owners, KPIs, and measurable outcomes tied to premium positioning.',    color: '#fbbf24', pillar: 'Realization' },
+                { time: '4:00 - 4:30',   title: 'Action Plan & Close',                            desc: 'Consolidated action plan delivered. Next steps, accountability assignments, and follow-up schedule established.',                                                                         color: '#2563eb', pillar: null },
               ].map((session, i) => (
                 <div key={i} style={{ display: 'flex', gap: '20px', alignItems: 'flex-start', padding: session.desc ? '20px' : '12px 20px', background: session.desc ? 'white' : '#f8fafc', borderRadius: '8px', borderLeft: `3px solid ${session.color}`, marginBottom: '8px', border: session.desc ? `1px solid #e2e8f0` : 'none', borderLeftWidth: '3px', borderLeftColor: session.color, borderLeftStyle: 'solid' }}>
                   <div style={{ minWidth: '100px', flexShrink: 0 }}>
@@ -3432,7 +3558,7 @@ export default function Mockups() {
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                       <h4 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', margin: 0 }}>{session.title}</h4>
-                      {session.dimension && (
+                      {session.pillar && (
                         <span style={{ fontSize: '10px', fontWeight: '600', color: session.color, background: `${session.color}14`, padding: '2px 8px', borderRadius: '10px' }}>{session.pillar}</span>
                       )}
                     </div>
@@ -3446,16 +3572,16 @@ export default function Mockups() {
             <h3 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '16px', marginTop: '48px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Workshop Deliverables</h3>
             <div className="grid-3" style={{ marginBottom: '48px' }}>
               <div className="box accent-navy" style={{ paddingLeft: '28px' }}>
-                <h4 style={{ fontSize: '14px', fontWeight: '600', color: '#475569', marginBottom: '8px' }}>Asset Gap Map</h4>
-                <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: '1.6' }}>Complete inventory of organizational assets with utilization scores and unrealized potential estimates.</p>
+                <h4 style={{ fontSize: '14px', fontWeight: '600', color: '#475569', marginBottom: '8px' }}>Positioning Gap Analysis</h4>
+                <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: '1.6' }}>A clear picture of where the organization currently competes vs. where premium positioning is achievable, by service line.</p>
               </div>
               <div className="box accent-teal" style={{ paddingLeft: '28px' }}>
-                <h4 style={{ fontSize: '14px', fontWeight: '600', color: '#00bfa5', marginBottom: '8px' }}>Asset System Map</h4>
-                <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: '1.6' }}>Visual dependency map showing how assets connect, where bottlenecks exist, and where value multiplies.</p>
+                <h4 style={{ fontSize: '14px', fontWeight: '600', color: '#00bfa5', marginBottom: '8px' }}>Differentiation System Map</h4>
+                <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: '1.6' }}>Visual map of how service delivery, team structure, and customer experience connect - and where to intervene for maximum differentiation.</p>
               </div>
               <div className="box accent-gold" style={{ paddingLeft: '28px' }}>
-                <h4 style={{ fontSize: '14px', fontWeight: '600', color: '#d97706', marginBottom: '8px' }}>90-Day Action Plan</h4>
-                <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: '1.6' }}>Prioritized conversion initiatives with owners, timelines, KPIs, and expected value capture for each.</p>
+                <h4 style={{ fontSize: '14px', fontWeight: '600', color: '#d97706', marginBottom: '8px' }}>90-Day Execution Plan</h4>
+                <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: '1.6' }}>Prioritized initiatives with owners, timelines, and KPIs tied directly to competitive differentiation and premium positioning outcomes.</p>
               </div>
             </div>
 
@@ -3465,7 +3591,7 @@ export default function Mockups() {
               <div className="grid-2">
                 <div>
                   <h4 style={{ fontSize: '13px', fontWeight: '600', color: '#1e293b', marginBottom: '12px' }}>Printed Materials</h4>
-                  {['Participant workbook (branded, spiral-bound)', 'Asset inventory worksheets (per participant)', 'System mapping templates (A3 format)', '90-day planning templates', 'Certificate of participation'].map((item, i) => (
+                  {['Participant workbook (branded, spiral-bound)', 'Positioning analysis worksheets (per participant)', 'System mapping templates (A3 format)', '90-day planning templates', 'Certificate of participation'].map((item, i) => (
                     <div key={i} className="checklist-item">
                       <div className="checklist-icon">{'\u2713'}</div>
                       <div className="checklist-text">{item}</div>
@@ -3474,7 +3600,7 @@ export default function Mockups() {
                 </div>
                 <div>
                   <h4 style={{ fontSize: '13px', fontWeight: '600', color: '#1e293b', marginBottom: '12px' }}>Room Setup & Digital</h4>
-                  {['Presentation deck (see Presentation tab)', 'Whiteboard or flip charts with markers', 'Post-it notes in pillar colors (slate, teal, gold)', 'Name tents with WhiteSpace branding', 'Follow-up email template with action plan PDF'].map((item, i) => (
+                  {['Presentation deck (see Presentation tab)', 'Whiteboard or flip charts with markers', 'Post-it notes in phase colors (slate, teal, gold, blue)', 'Name tents with WhiteSpace branding', 'Follow-up email template with action plan PDF'].map((item, i) => (
                     <div key={i} className="checklist-item">
                       <div className="checklist-icon">{'\u2713'}</div>
                       <div className="checklist-text">{item}</div>
@@ -3489,10 +3615,10 @@ export default function Mockups() {
               <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#1e293b', marginBottom: '16px' }}>Facilitator Notes</h3>
               <div style={{ borderLeft: '3px solid #00bfa5', paddingLeft: '20px' }}>
                 <p style={{ fontSize: '14px', color: '#475569', lineHeight: '1.8', marginBottom: '12px' }}>
-                  The three sessions are sequenced intentionally - Expectation must complete before Systemization begins, and Systemization before Realization. Do not allow the group to jump ahead to "solutions" before the asset inventory is thorough. The most common facilitator mistake is letting the group rush past discovery.
+                  The three sessions are sequenced intentionally - Expectation must complete before Systemization begins, and Systemization before Realization. Do not allow the group to jump ahead to execution before the competitive clarity work is thorough. The most common facilitator mistake is letting the group rush past the positioning gap analysis.
                 </p>
                 <p style={{ fontSize: '14px', color: '#475569', lineHeight: '1.8', margin: 0 }}>
-                  Use the dimension colors physically in the room - slate post-its for assets, teal for system connections, gold for value conversion opportunities. This reinforces the methodology visually and makes the Asset System Map immediately legible.
+                  Use the phase colors physically in the room - slate post-its for positioning gaps, teal for system redesign, gold for execution priorities, blue for validation metrics. This reinforces the methodology visually and makes the Differentiation System Map immediately legible.
                 </p>
               </div>
             </div>
@@ -3564,7 +3690,7 @@ export default function Mockups() {
 
             {[
               { doTitle: 'Logo Usage', doText: 'Use the full lockup at correct proportions. Maintain clear space around the mark. Display on approved background colors.', dontText: 'Stretch, rotate, or skew the mark. Change individual bracket colors. Apply drop shadows, gradients, or effects. Place on busy backgrounds.' },
-              { doTitle: 'Color', doText: 'Use Navy for authority, Teal for innovation, Gold for realization. Colors carry meaning tied to the three dimensions.', dontText: 'Use colors purely for decoration. Mix with off-brand palette colors. Use Teal or Gold for body text (accessibility failures).' },
+              { doTitle: 'Color', doText: 'Use Navy for authority, Teal for innovation, Gold for realization. Each color maps to a methodology phase. Colors carry meaning.', dontText: 'Use colors purely for decoration. Mix with off-brand palette colors. Use Teal or Gold for body text (accessibility failures).' },
               { doTitle: 'CTAs', doText: 'Drive toward discovery conversations and consultations. Frame the certification program as selective and high-value.', dontText: 'Include shopping carts or transactional language. Use "Buy Now" or "Add to Cart." This is consultative, not e-commerce.' },
             ].map((pair, i) => (
               <div key={i} className="grid-2" style={{ marginBottom: '24px' }}>
@@ -3639,10 +3765,10 @@ export default function Mockups() {
                   <Icon size={28} />
                   <div>
                     <p style={{ fontFamily: 'Lora, serif', fontSize: '16px', fontWeight: '400', color: '#1e293b', margin: '0 0 2px 0' }}>Steve Smith</p>
-                    <p style={{ fontSize: '11px', color: '#64748b', margin: 0 }}>Managing Partner</p>
+                    <p style={{ fontSize: '11px', color: '#64748b', margin: 0 }}>CEO, Consult WhiteSpace</p>
                   </div>
                   <div style={{ fontSize: '10px', color: '#64748b', lineHeight: '1.8' }}>
-                    steve@consultwhitespace.com<br/>
+                    steve@whitespacellc.com<br/>
                     (555) 123-4567
                   </div>
                 </div>
@@ -3703,17 +3829,17 @@ export default function Mockups() {
                   </div>
                   <div>
                     <p style={{ fontFamily: 'Lora, serif', fontSize: '15px', fontWeight: '400', color: '#1e293b', margin: '0 0 2px 0' }}>Steve Smith</p>
-                    <p style={{ fontSize: '12px', color: '#475569', margin: '0 0 8px 0' }}>Managing Partner, Consult WhiteSpace</p>
+                    <p style={{ fontSize: '12px', color: '#475569', margin: '0 0 8px 0' }}>CEO, Consult WhiteSpace</p>
                     <div style={{ fontSize: '11px', color: '#64748b', lineHeight: '1.8' }}>
-                      <span>steve@consultwhitespace.com</span>
+                      <span>steve@whitespacellc.com</span>
                       <span style={{ margin: '0 8px', color: '#cbd5e1' }}>|</span>
                       <span>(555) 123-4567</span>
                     </div>
-                    <p style={{ fontSize: '10px', color: '#94a3b8', marginTop: '8px', fontStyle: 'italic' }}>Author of Outcome Dynamics™ (Forbes Books, Sept 2026)</p>
+                    <p style={{ fontSize: '10px', color: '#94a3b8', marginTop: '8px', fontStyle: 'italic' }}>Outcome Dynamics™ Methodology - whitespacellc.com</p>
                   </div>
                 </div>
               </div>
-              <p style={{ fontSize: '12px', color: '#64748b', marginTop: '16px' }}>Bracket icon + teal divider line. Book credit included for Steve and Bill.</p>
+              <p style={{ fontSize: '12px', color: '#64748b', marginTop: '16px' }}>Bracket icon + teal divider line. Book credit added for Bill Adams Jr. in his signature; website link for Steve's.</p>
             </div>
 
             {/* LinkedIn Banner */}
@@ -3791,14 +3917,14 @@ export default function Mockups() {
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: 'linear-gradient(to right, #475569 30%, #00bfa5 30%, #00bfa5 55%, #475569 55%, #475569 75%, #fbbf24 75%)' }}></div>
                 <Icon size={36} />
                 <div>
-                  <p style={{ fontFamily: 'Lora, serif', fontSize: '24px', fontWeight: '300', color: '#1e293b', lineHeight: '1.3', margin: '0 0 8px 0' }}>Asset Discovery<br/>& Valuation Report</p>
+                  <p style={{ fontFamily: 'Lora, serif', fontSize: '24px', fontWeight: '300', color: '#1e293b', lineHeight: '1.3', margin: '0 0 8px 0' }}>Competitive Positioning<br/>Engagement Report</p>
                   <div style={{ height: '1px', background: '#e2e8f0', margin: '16px 0' }}></div>
                   <p style={{ fontSize: '13px', color: '#64748b', margin: 0 }}>Prepared for Acme Corp</p>
                   <p style={{ fontSize: '12px', color: '#94a3b8', margin: '4px 0 0 0' }}>March 2026 - Confidential</p>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <Icon size={20} />
-                  <p style={{ fontSize: '10px', color: '#94a3b8', margin: 0 }}>WhiteSpace Outcome Dynamics™</p>
+                  <p style={{ fontSize: '10px', color: '#94a3b8', margin: 0 }}>Outcome Dynamics™</p>
                 </div>
               </div>
               <p style={{ fontSize: '12px', color: '#64748b', marginTop: '16px' }}>8.5" x 11" - Pillar gradient top bar, icon watermark optional</p>
@@ -3991,8 +4117,8 @@ export default function Mockups() {
             <div className="card-white">
               <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#1e293b', marginBottom: '24px' }}>8-Week Rollout Roadmap</h3>
               {[
-                { week: 'Weeks 1-2', title: 'Internal Training', desc: 'Steve, Bill, and team onboard to brand system', color: '#475569' },
-                { week: 'Weeks 3-4', title: 'Asset Generation', desc: 'Business cards, templates, signage, collateral produced', color: '#475569' },
+                { week: 'Weeks 1-2', title: 'Internal Training', desc: 'Steve, Bill Adams Jr., and team onboard to brand system', color: '#475569' },
+                { week: 'Weeks 3-4', title: 'Collateral Production', desc: 'Business cards, templates, signage, and branded collateral produced', color: '#475569' },
                 { week: 'Weeks 5-6', title: 'Website & LinkedIn Launch', desc: 'Site goes live, LinkedIn video series begins', color: '#00bfa5' },
                 { week: 'Weeks 7-8', title: 'Program Go-Live', desc: 'Certification program opens, consultation bookings active', color: '#fbbf24' },
               ].map((phase, i) => (
