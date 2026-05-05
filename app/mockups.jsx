@@ -2676,8 +2676,6 @@ export default function Mockups() {
           </>
         )}
 
-        )}
-
         {/* ==================== COMPONENTS ==================== */}
         {activeTab === 'components' && (
           <>
